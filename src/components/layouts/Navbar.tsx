@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
-import AnimatedSection, { fadeIn } from "./AnimatedSection";
-import ThemeToggle from "./ThemeToggle";
-import LanguageSwitcher from "./LanguageSwitcher";
+import AnimatedSection, { fadeIn } from "../ui/animations/AnimatedSection";
+import ThemeToggle from "../ui/common/ThemeToggle";
+import LanguageSwitcher from "../ui/common/LanguageSwitcher";
 import { useLanguage } from "@/hooks/useLanguage";
 
 interface NavbarProps {

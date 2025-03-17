@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
-import AnimatedSection, { fadeIn } from "./AnimatedSection";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import GitHub from "@/icons/github.svg?react";
@@ -9,11 +8,12 @@ import LinkedIn from "@/icons/linkedin.svg?react";
 import X from "@/icons/x.svg?react";
 
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { db } from "../utils/firebase";
 import { createMessage } from "@/utils/firebase/messages";
 import { useLanguage } from "@/hooks/useLanguage";
 import { Send } from "lucide-react";
 import { clsx } from "clsx";
+import { db } from "@/utils/firebase";
+import AnimatedSection, { fadeIn } from "@/components/ui/animations/AnimatedSection";
 
 // Define the form schema with Zod
 const formSchema = z.object({

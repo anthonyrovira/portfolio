@@ -1,6 +1,6 @@
 import { useLanguage } from "@/hooks/useLanguage";
-import AnimatedSection, { fadeIn } from "./AnimatedSection";
-import SocialLinksIcons from "./SocialLinksIcons";
+import AnimatedSection, { fadeIn } from "../ui/animations/AnimatedSection";
+import SocialLinksIcons from "../ui/common/SocialLinksIcons";
 
 const Footer = () => {
   const { t } = useLanguage();

@@ -1,7 +1,7 @@
 import { Experience } from "@/utils/translations/types";
 import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
-import Tags from "./Tags";
+import Tags from "../../ui/common/Tags";
 import { colorGradients } from "@/constants/colors";
 import { clsx } from "clsx";
 import { useLanguage } from "@/hooks/useLanguage";

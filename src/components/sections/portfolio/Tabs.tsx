@@ -1,5 +1,5 @@
 import { Dispatch, FC, SetStateAction } from "react";
-import AnimatedSection, { fadeIn } from "./AnimatedSection";
+import AnimatedSection, { fadeIn } from "../../ui/animations/AnimatedSection";
 import TabButton from "./TabButton";
 import { PortfolioTab } from "@/utils/translations/types";
 import { useLanguage } from "@/hooks/useLanguage";

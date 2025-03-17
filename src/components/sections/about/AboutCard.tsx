@@ -1,6 +1,6 @@
 import { BriefcaseBusiness, Award, Languages } from "lucide-react";
 import { useMemo } from "react";
-import AnimatedSection, { fadeIn } from "./AnimatedSection";
+import AnimatedSection, { fadeIn } from "../../ui/animations/AnimatedSection";
 import { AboutCardType } from "@/utils/translations/types";
 import { colorGradients } from "@/constants/colors";
 import { useLanguage } from "@/hooks/useLanguage";

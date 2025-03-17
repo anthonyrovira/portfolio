@@ -8,7 +8,7 @@ interface Props {
   goBackToHome: boolean;
 }
 
-export const ProdErrorPage = ({ text, canRefresh, goBackToHome }: Props) => {
+export const ErrorPage = ({ text, canRefresh, goBackToHome }: Props) => {
   const navigate = useNavigate();
   return (
     <div className="relative w-full h-screen mx-auto overflow-hidden flex items-center">

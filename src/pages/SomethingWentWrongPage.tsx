@@ -1,5 +1,5 @@
-import { ProdErrorPage } from "../prod-components/ProdErrorPage";
+import { ErrorPage } from "../components/errors/ErrorPage";
 
 export default function SomethingWentWrongPage() {
-  return <ProdErrorPage text="Something went wrong." canRefresh={true} goBackToHome={false} />;
+  return <ErrorPage text="Something went wrong." canRefresh={true} goBackToHome={false} />;
 }

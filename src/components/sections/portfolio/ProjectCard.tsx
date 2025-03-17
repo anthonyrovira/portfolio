@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import GitHub from "@/icons/github.svg?react";
-import AnimatedSection, { fadeIn } from "./AnimatedSection";
+import AnimatedSection, { fadeIn } from "../../ui/animations/AnimatedSection";
 import { Project } from "@/utils/translations/types";
-import Tags from "./Tags";
+import Tags from "../../ui/common/Tags";
 import { useLanguage } from "@/hooks/useLanguage";
 
 type ProjectCardProps = {

@@ -1,13 +1,12 @@
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
-import AnimatedSection, { fadeIn } from "./AnimatedSection";
+import AnimatedSection, { fadeIn } from "../../ui/animations/AnimatedSection";
 import { Sparkles } from "lucide-react";
 import { PortfolioTab } from "@/utils/translations/types";
-import CareerTimeline from "./CareerTimeline";
 import Skills from "./Skills";
 import Tabs from "./Tabs";
 import { useLanguage } from "@/hooks/useLanguage";
-// import { useLanguage } from "@/hooks/useLanguage";
+import CareerTimeline from "./CareerTimeline";
 
 const Portfolio = () => {
   const { t } = useLanguage();

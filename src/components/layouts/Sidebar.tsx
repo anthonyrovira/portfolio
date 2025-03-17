@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ThemeToggle from "./ThemeToggle";
+import ThemeToggle from "../ui/common/ThemeToggle";
 import { GalleryHorizontalEnd, House, Send, UserRoundSearch } from "lucide-react";
-import LanguageSwitcher from "./LanguageSwitcher";
-import SocialLinksIcons from "./SocialLinksIcons";
+import LanguageSwitcher from "../ui/common/LanguageSwitcher";
+import SocialLinksIcons from "../ui/common/SocialLinksIcons";
 import { useLanguage } from "@/hooks/useLanguage";
 
 type SidebarProps = {

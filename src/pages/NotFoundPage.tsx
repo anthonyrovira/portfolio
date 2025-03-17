@@ -1,5 +1,5 @@
-import { ProdErrorPage } from "../prod-components/ProdErrorPage";
+import { ErrorPage } from "../components/errors/ErrorPage";
 
 export default function NotFoundPage() {
-  return <ProdErrorPage text="Page not found." canRefresh={false} goBackToHome />;
+  return <ErrorPage text="Page not found." canRefresh={false} goBackToHome />;
 }

@@ -1,9 +1,9 @@
-import AnimatedSection, { fadeIn } from "./AnimatedSection";
 import PP from "/pictures/pp.webp";
 import { Download, Sparkles } from "lucide-react";
 import AboutCard from "./AboutCard";
 import { AboutCardType } from "@/utils/translations/types";
 import { useLanguage } from "@/hooks/useLanguage";
+import AnimatedSection, { fadeIn } from "@/components/ui/animations/AnimatedSection";
 
 const About = () => {
   const { t } = useLanguage();

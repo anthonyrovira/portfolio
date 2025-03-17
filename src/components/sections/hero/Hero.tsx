@@ -1,4 +1,4 @@
-import AnimatedSection, { fadeIn, zoomIn } from "./AnimatedSection";
+import AnimatedSection, { fadeIn, zoomIn } from "../../ui/animations/AnimatedSection";
 import StatusBadge from "./StatusBadge";
 import { SOCIAL_LINKS } from "@/constants/social";
 import SocialLinkHero from "./SocialLinkHero";

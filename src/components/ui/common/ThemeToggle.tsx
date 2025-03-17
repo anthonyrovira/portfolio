@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Sun, Moon } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import useTheme from "@/hooks/useTheme";
-import { Theme } from "@/providers/ThemeProvider";
+import { Theme } from "@/components/providers/ThemeProvider";
 
 interface ThemeToggleProps {
   variant?: "icon" | "buttons";

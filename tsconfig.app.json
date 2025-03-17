@@ -26,13 +26,11 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/app/*": ["./src/app/*"],
-      "@/brain/*": ["./src/brain/*"],
       "@/components/*": ["./src/components/*"],
-      "@/constants/*": ["./src/constants/*"],
-      "@/internal-components/*": ["./src/internal-components/*"],
-      "@/lib/*": ["./src/lib/*"],
+      "@/constants/*": ["src/constants/*"],
+      "@/contexts/*": ["src/contexts/*"],
+      "@/hooks/*": ["./src/hooks/*"],
       "@/pages/*": ["./src/pages/*"],
-      "@/prod-components/*": ["./src/prod-components/*"],
       "@/utils/*": ["./src/utils/*"],
       "@/icons/*": ["./src/icons/*"]
     },
