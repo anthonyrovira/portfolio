@@ -4,10 +4,11 @@ import svgr from "vite-plugin-svgr";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
+import { visualizer } from "rollup-plugin-visualizer";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss(), svgr()],
+  plugins: [react(), tailwindcss(), svgr(), visualizer()],
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
     alias: {
@@ -37,5 +38,22 @@ export default defineConfig({
     cssMinify: true,
     manifest: true,
     minify: true,
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          if (!id.includes("node_modules")) {
+            return;
+          }
+          if (id.includes("react")) {
+            return "vendor-react";
+          }
+          if (id.includes("firebase")) {
+            return "vendor-firebase";
+          }
+          return "vendor-other";
+        },
+      },
+    },
   },
 });

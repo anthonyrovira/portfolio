@@ -31,3 +31,4 @@ settings.json
 .env.prod
 test-report.xml
 .vitest-cache
+stats.html
