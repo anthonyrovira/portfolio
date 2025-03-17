@@ -25,10 +25,17 @@ export default defineConfig({
   },
   test: {
     globals: true,
+    environment: "jsdom",
     setupFiles: ["./src/tests/setup.ts"],
     include: ["**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  build: {
+    outDir: "dist",
+    cssMinify: true,
+    manifest: true,
+    minify: true,
   },
 });

@@ -54,6 +54,11 @@ const ThemeToggle: FC<ThemeToggleProps> = ({ variant = "dropdown" }) => {
   if (variant === "icon") {
     return (
       <motion.button
+        type="button"
+        name="theme-toggle"
+        role="switch"
+        aria-pressed={theme === "dark"}
+        aria-expanded={isOpen}
         className="hidden sm:flex h-10 w-10 items-center justify-center rounded-md border dark:border-white/10 border-light border-border-light dark:text-white text-amber-500 dark:hover:bg-dark-light/50 bg-light-foreground/10 shadow-xs hover:bg-light-foreground"
         onClick={() => {
           const nextTheme = theme === "dark" ? "light" : "dark";
@@ -73,6 +78,11 @@ const ThemeToggle: FC<ThemeToggleProps> = ({ variant = "dropdown" }) => {
     <div className="flex gap-2">
       {dataThemes.map((data) => (
         <motion.button
+          type="button"
+          name="theme-toggle"
+          role="switch"
+          aria-pressed={theme === "dark"}
+          aria-expanded={isOpen}
           key={data.id}
           className={`h-10 w-10 flex items-center justify-center text-white bg-dark-light/30 hover:bg-dark-light/50 rounded-md border border-white/10 ${
             theme === data.id

@@ -60,6 +60,10 @@ export function Navbar({ isSidebarOpen, toggleSidebar }: NavbarProps) {
         <AnimatedSection variants={fadeIn("right", 0)} animate="show" className="flex items-center gap-1">
           <motion.button
             className="flex items-center gap-1 px-3 py-1 rounded-md -ml-2.5"
+            role="button"
+            name="home"
+            type="button"
+            aria-label="Home"
             onClick={() => {
               const element = document.getElementById("home");
               element?.scrollIntoView({ behavior: "smooth" });
@@ -73,6 +77,7 @@ export function Navbar({ isSidebarOpen, toggleSidebar }: NavbarProps) {
 
         {/* Desktop Navigation */}
         <AnimatedSection
+          data-testid="desktop-nav"
           className="list-none hidden sm:flex sm:flex-row gap-6 items-center"
           variants={fadeIn("left", 0.1)}
           animate="show"
@@ -98,8 +103,14 @@ export function Navbar({ isSidebarOpen, toggleSidebar }: NavbarProps) {
         </AnimatedSection>
 
         {/* Mobile Navigation - Sidebar Toggle */}
-        <div className="sm:hidden p-1 mr-3 flex justify-end items-center">
-          <motion.div
+        <div data-testid="mobile-menu" className="sm:hidden p-1 mr-3 flex justify-end items-center">
+          <motion.button
+            role="button"
+            type="button"
+            aria-label="Toggle Sidebar"
+            aria-expanded={isSidebarOpen}
+            aria-controls="sidebar"
+            name="toggle-sidebar"
             className="w-8 h-8 cursor-pointer z-20 flex items-center justify-center"
             onClick={toggleSidebar}
             whileTap={{ scale: 0.9 }}
@@ -109,7 +120,7 @@ export function Navbar({ isSidebarOpen, toggleSidebar }: NavbarProps) {
             ) : (
               <HiMenu className="text-text-light_secondary dark:text-white text-3xl" />
             )}
-          </motion.div>
+          </motion.button>
         </div>
       </div>
     </nav>

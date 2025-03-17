@@ -29,6 +29,11 @@ const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ variant = "dropdown" }) =
       <div className="px-4 py-3 flex gap-4">
         {languageOptions.map((option) => (
           <motion.button
+            name="switch-language"
+            type="button"
+            role="button"
+            aria-pressed={language === option.label}
+            aria-label={`Switch to ${option.label}`}
             key={option.code}
             className={`h-10 text-white bg-dark-light/30 hover:bg-dark-light/50 px-3 py-2 rounded-md border border-white/10 ${
               language === option.code
@@ -50,6 +55,11 @@ const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ variant = "dropdown" }) =
   return (
     <div className="sm:block relative">
       <motion.button
+        name="switch-language"
+        type="button"
+        role="button"
+        aria-pressed={language === currentLanguage?.label}
+        aria-label={`Switch to ${currentLanguage?.label}`}
         className="flex items-center gap-1 h-10 text-text-light  dark:text-white bg-light-foreground/10 shadow-xs hover:bg-light-foreground dark:hover:bg-dark-light/50 px-3 py-2 rounded-md border dark:border-white/10 border-light border-border-light"
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ scale: 1.05 }}
@@ -57,7 +67,10 @@ const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ variant = "dropdown" }) =
       >
         <img src={`/pictures/${currentLanguage?.flag}.webp`} alt={currentLanguage?.label} className="w-auto h-full rounded-sm" />
 
-        <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
+        <ChevronDown
+          data-testid="chevron-icon"
+          className={`h-4 w-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+        />
       </motion.button>
 
       {isOpen && (
@@ -66,9 +79,13 @@ const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ variant = "dropdown" }) =
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
+          role="menu"
         >
           {languageOptions.map((option) => (
             <motion.button
+              name="switch-language-option"
+              type="button"
+              role="button"
               key={option.code}
               className={clsx(
                 "w-full flex flex-row items-center px-4 py-2 rounded-sm",

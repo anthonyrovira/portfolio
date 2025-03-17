@@ -14,6 +14,8 @@ import { Send } from "lucide-react";
 import { clsx } from "clsx";
 import { db } from "@/utils/firebase";
 import AnimatedSection, { fadeIn } from "@/components/ui/animations/AnimatedSection";
+import DOMPurify from "dompurify";
+import { checkRateLimit } from "@/utils/security";
 
 // Define the form schema with Zod
 const formSchema = z.object({
@@ -48,16 +50,30 @@ const ContactForm = () => {
     setIsSubmitting(true);
     setSubmitError(null);
 
+    // Add rate limiting check
+    if (!checkRateLimit()) {
+      setSubmitError("Too many attempts. Please try again later.");
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
+      // Sanitize input data
+      const sanitizedData = {
+        name: DOMPurify.sanitize(data.name),
+        email: DOMPurify.sanitize(data.email),
+        message: DOMPurify.sanitize(data.message),
+      };
+
       // Submit the form data to Firebase
-      console.log("Form data to send to Firebase:", data);
+      console.log("Form data to send to Firebase:", sanitizedData);
 
       let firestoreSuccess = false;
 
       // First try submitting to Firestore directly
       try {
         await addDoc(collection(db, "messages"), {
-          ...data,
+          ...sanitizedData,
           createdAt: serverTimestamp(), // Use server timestamp for consistency
         });
         firestoreSuccess = true;
@@ -70,7 +86,7 @@ const ContactForm = () => {
       // If Firestore submission failed, try using our API endpoint as backup
       if (!firestoreSuccess) {
         try {
-          const response = await createMessage(data);
+          const response = await createMessage(sanitizedData);
           console.log({ response });
 
           // if (!response) {
@@ -152,13 +168,14 @@ const ContactForm = () => {
           {/* Contact Form - Takes up 3/5 of the space on desktop */}
           <AnimatedSection className="lg:col-span-3" variants={fadeIn("right", 0.2)}>
             <div className="dark:bg-dark-light bg-light-card border dark:border-dark-border border-light-border rounded-xl p-4 md:p-6 shadow-lg">
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 md:space-y-6">
+              <form role="form" onSubmit={handleSubmit(onSubmit)} className="space-y-4 md:space-y-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="block text-base font-medium text-text-light_secondary dark:text-white/90">
                     {t.contact.form.name.label}
                   </label>
                   <input
                     id="name"
+                    type="text"
                     {...register("name")}
                     aria-invalid={!!errors.name}
                     aria-describedby="name-error"
@@ -221,6 +238,7 @@ const ContactForm = () => {
 
                 <div>
                   <motion.button
+                    role="button"
                     onClick={() => {
                       const element = document.getElementById("portfolio");
                       element?.scrollIntoView({ behavior: "smooth" });
@@ -260,6 +278,7 @@ const ContactForm = () => {
               <div className="space-y-6 grow">
                 <a
                   href="https://www.linkedin.com/in/anthonyrovira/"
+                  role="link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center cursor-pointer p-4 rounded-lg bg-light-foreground dark:bg-dark-background hover:bg-linear-to-r hover:from-linkedin/30 hover:to-linkedin/50 dark:hover:from-linkedin/40 dark:hover:to-linkedin/80 border border-white/5 transition-colors duration-300"
@@ -276,6 +295,7 @@ const ContactForm = () => {
                 <a
                   href="https://github.com/anthonyrovira"
                   target="_blank"
+                  role="link"
                   rel="noopener noreferrer"
                   className="flex items-center p-4 rounded-lg bg-light-foreground dark:bg-dark-background hover:bg-linear-to-r hover:from-github/10 hover:to-github/30 dark:hover:from-github/40 dark:hover:to-github/80 border border-white/5 transition-colors duration-300"
                 >
@@ -291,6 +311,7 @@ const ContactForm = () => {
                 <a
                   href="https://x.com/AnthonyRoviraJS"
                   target="_blank"
+                  role="link"
                   rel="noopener noreferrer"
                   className="flex items-center p-4 rounded-lg bg-light-foreground dark:bg-dark-background hover:bg-linear-to-r hover:from-x/40 hover:to-x/80 border border-white/5 transition-colors duration-300"
                 >
@@ -308,6 +329,7 @@ const ContactForm = () => {
                 {t.contact.connect.emailPrefix}
                 <a
                   href="mailto:anthonyrov@gmail.com"
+                  role="link"
                   className="text-accent-purple hover:text-accent-blue transition-colors duration-300"
                 >
                   anthonyrov@gmail.com
