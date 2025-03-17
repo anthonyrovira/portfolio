@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+coverage/
+settings.json
+.vs/*
+.env
+.env.local
+.env.prod
+test-report.xml
+.vitest-cache
