@@ -12,10 +12,10 @@ import { createMessage } from "@/utils/firebase/messages";
 import { useLanguage } from "@/hooks/useLanguage";
 import { Send } from "lucide-react";
 import { clsx } from "clsx";
-import { db } from "@/utils/firebase";
 import AnimatedSection, { fadeIn } from "@/components/ui/animations/AnimatedSection";
 import DOMPurify from "dompurify";
 import { checkRateLimit } from "@/utils/security";
+import { db } from "@/utils/firebase/firebase";
 
 // Define the form schema with Zod
 const formSchema = z.object({

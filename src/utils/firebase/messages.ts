@@ -1,6 +1,6 @@
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { ContactForm } from "./data-contracts";
-import { db } from "@/utils/firebase";
+import { db } from "./firebase";
 
 export const createMessage = async (form: ContactForm) => {
   try {
