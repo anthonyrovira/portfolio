@@ -32,3 +32,6 @@ settings.json
 test-report.xml
 .vitest-cache
 stats.html
+*.key
+*.crt
+secrets/
