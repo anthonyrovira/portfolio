@@ -9,6 +9,7 @@ import { visualizer } from "rollup-plugin-visualizer";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(), svgr(), visualizer()],
+  base: "/",
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
     alias: {
