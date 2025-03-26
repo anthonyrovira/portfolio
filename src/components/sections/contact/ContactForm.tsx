@@ -7,7 +7,7 @@ import GitHub from "@/icons/github.svg?react";
 import LinkedIn from "@/icons/linkedin.svg?react";
 import X from "@/icons/x.svg?react";
 
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 import { createMessage } from "@/utils/firebase/messages";
 import { useLanguage } from "@/hooks/useLanguage";
 import { Send } from "lucide-react";
@@ -72,10 +72,7 @@ const ContactForm = () => {
 
       // First try submitting to Firestore directly
       try {
-        await addDoc(collection(db, "messages"), {
-          ...sanitizedData,
-          createdAt: serverTimestamp(), // Use server timestamp for consistency
-        });
+        await addDoc(collection(db, "messages"), sanitizedData);
         firestoreSuccess = true;
         console.log("Message saved to Firestore successfully");
       } catch (firebaseError) {
@@ -87,13 +84,7 @@ const ContactForm = () => {
       if (!firestoreSuccess) {
         try {
           const response = await createMessage(sanitizedData);
-          console.log({ response });
-
-          // if (!response) {
-          //   throw new Error(`API error: ${response.status}`);
-          // }
-
-          console.log("Message saved via API successfully");
+          console.log("Message saved via API successfully:", response);
         } catch (apiError) {
           console.error("API error:", apiError);
           // If both Firestore and API fail, throw error to trigger the catch block
