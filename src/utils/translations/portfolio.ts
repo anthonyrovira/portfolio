@@ -339,10 +339,10 @@ const fr: PortfolioTranslations = {
           endDate: "2019-01-31",
           location: "Dunleer, Ireland",
           description:
-            "Glen Dimplex es un grupo internacional líder que ofrece soluciones de calefacción y ventilación innovadoras y energéticamente eficientes a clientes de todo el mundo.",
+            "Glen Dimplex est un groupe international de premier plan qui fournit des solutions de chauffage et de ventilation innovantes et écoénergétiques à des clients du monde entier.",
           bulletPoints: [
-            "Diseñé y desarrollé un software de supervisión para bancos de seguridad y cámaras climáticas que cumplen con los estándares regulatorios.",
-            "Validé y profundicé mi dominio del inglés a través de una gratificante experiencia internacional en Irlanda.",
+            "Conception et développement d'un logiciel de supervision pour les bancs de sécurité et les chambres climatiques répondant aux normes réglementaires.",
+            "Validation et approfondissement de ma maîtrise de l'anglais grâce à une expérience internationale enrichissante en Irlande.",
           ],
           url: "https://www.glendimplex.com/",
           tags: ["labview", "matlab", "simulink"],
