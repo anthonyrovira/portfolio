@@ -6,7 +6,6 @@ import { z } from "zod";
 import GitHub from "@/icons/github.svg?react";
 import LinkedIn from "@/icons/linkedin.svg?react";
 import X from "@/icons/x.svg?react";
-
 import { collection, addDoc } from "firebase/firestore";
 import { createMessage } from "@/utils/firebase/messages";
 import { useLanguage } from "@/hooks/useLanguage";
@@ -14,7 +13,6 @@ import { Send } from "lucide-react";
 import { clsx } from "clsx";
 import AnimatedSection, { fadeIn } from "@/components/ui/animations/AnimatedSection";
 import DOMPurify from "dompurify";
-import { checkRateLimit } from "@/utils/security";
 import { db } from "@/utils/firebase/firebase";
 
 // Define the form schema with Zod
@@ -50,13 +48,6 @@ const ContactForm = () => {
     setIsSubmitting(true);
     setSubmitError(null);
 
-    // Add rate limiting check
-    if (!checkRateLimit()) {
-      setSubmitError("Too many attempts. Please try again later.");
-      setIsSubmitting(false);
-      return;
-    }
-
     try {
       // Sanitize input data
       const sanitizedData = {
@@ -68,28 +59,28 @@ const ContactForm = () => {
       // Submit the form data to Firebase
       console.log("Form data to send to Firebase:", sanitizedData);
 
-      let firestoreSuccess = false;
+      let serverSuccess = false;
 
-      // First try submitting to Firestore directly
+      // First try submitting to the server
       try {
-        await addDoc(collection(db, "messages"), sanitizedData);
-        firestoreSuccess = true;
-        console.log("Message saved to Firestore successfully");
-      } catch (firebaseError) {
-        console.error("Firebase error:", firebaseError);
-        // Firestore submission failed, we'll use the API as backup
+        const response = await createMessage(sanitizedData);
+        console.log("Message sent successfully:", response);
+        serverSuccess = true;
+      } catch (apiError) {
+        console.error("Sending error:", apiError);
       }
 
-      // If Firestore submission failed, try using our API endpoint as backup
-      if (!firestoreSuccess) {
+      // If server submission failed, try using Firestore directly
+      if (!serverSuccess) {
         try {
-          const response = await createMessage(sanitizedData);
-          console.log("Message saved via API successfully:", response);
-        } catch (apiError) {
-          console.error("API error:", apiError);
+          await addDoc(collection(db, "messages"), sanitizedData);
+          console.log("Message sent successfully");
+        } catch (firebaseError) {
+          console.error("Sending error:", firebaseError);
+          // Firestore submission failed, we'll use the API as backup
           // If both Firestore and API fail, throw error to trigger the catch block
-          if (!firestoreSuccess) {
-            throw new Error("Failed to submit message through all available methods");
+          if (!serverSuccess) {
+            throw new Error("Failed to submit message");
           }
         }
       }
@@ -143,7 +134,7 @@ const ContactForm = () => {
         }}
       />
 
-      <div className="relative max-w-6xl pt-24 md:pt-4 mx-auto z-10">
+      <div className="relative max-w-6xl pt-24 pb-12 md:pt-4 md:pb-0 mx-auto z-10">
         {/* Section Header */}
         <AnimatedSection className="text-center mb-6 md:mb-16" variants={fadeIn("down", 0.1)}>
           <h2 className="text-4xl font-bold text-text-light_secondary dark:text-white mb-4">
@@ -156,7 +147,6 @@ const ContactForm = () => {
         </AnimatedSection>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-          {/* Contact Form - Takes up 3/5 of the space on desktop */}
           <AnimatedSection className="lg:col-span-3" variants={fadeIn("right", 0.2)}>
             <div className="dark:bg-dark-light bg-light-card border dark:border-dark-border border-light-border rounded-xl p-4 md:p-6 shadow-lg">
               <form role="form" onSubmit={handleSubmit(onSubmit)} className="space-y-4 md:space-y-6">
@@ -230,10 +220,6 @@ const ContactForm = () => {
                 <div>
                   <motion.button
                     role="button"
-                    onClick={() => {
-                      const element = document.getElementById("portfolio");
-                      element?.scrollIntoView({ behavior: "smooth" });
-                    }}
                     type="submit"
                     disabled={isSubmitting}
                     name="submit-message"
@@ -259,7 +245,6 @@ const ContactForm = () => {
             </div>
           </AnimatedSection>
 
-          {/* Connect with Me Section - Takes up 2/5 of the space on desktop */}
           <AnimatedSection className="lg:col-span-2" variants={fadeIn("left", 0.4)}>
             <div className="dark:bg-dark-light bg-light-card border dark:border-dark-border border-light-border rounded-xl p-4 md:p-6 shadow-lg h-full flex flex-col">
               <h3 className="text-xl font-semibold text-text-light dark:text-white mb-6">{t.contact.connect.title}</h3>

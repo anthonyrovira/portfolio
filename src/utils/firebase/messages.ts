@@ -1,15 +1,26 @@
-import { collection, addDoc } from "firebase/firestore";
 import { ContactForm } from "./data-contracts";
-import { db } from "./firebase";
-import { checkRateLimit } from "../security";
+
+const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3000";
 
 export const createMessage = async (form: ContactForm) => {
-  if (!checkRateLimit()) throw new Error("Too many requests");
   try {
-    const docRef = await addDoc(collection(db, "messages"), form);
-    console.log("Message written with id: ", docRef.id);
+    const response = await fetch(`${apiUrl}/api/messages`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Erreur HTTP: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log("Message sent successfully:", data);
+    return data;
   } catch (error) {
-    console.error("Error adding message: ", error);
+    console.error("Sending error:", error);
     throw error;
   }
 };
