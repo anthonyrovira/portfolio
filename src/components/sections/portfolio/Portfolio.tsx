@@ -18,7 +18,6 @@ const Portfolio = () => {
 
   return (
     <AnimatedSection
-      as="section"
       id="portfolio"
       className="w-full min-h-screen py-16 sm:py-20 relative"
       viewport={{ once: true, amount: 0.1 }}

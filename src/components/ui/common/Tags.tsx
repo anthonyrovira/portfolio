@@ -44,8 +44,6 @@ const Tags: FC<TagsProps> = ({ tags }) => {
     const tagLower = tag.toLowerCase();
     return tagColorMap[tagLower] || defaultTagStyle;
   };
-  console.log(theme);
-
   return (
     <div className="flex flex-wrap gap-2 pt-2">
       {tags.map((tag, index) => {

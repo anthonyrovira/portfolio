@@ -47,9 +47,9 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-8 items-center">
           {/* Profile Picture */}
           <AnimatedSection variants={fadeIn("right", 0.3)} className="md:col-span-2 flex justify-center md:justify-start">
-            <div className="relative w-48 h-48 sm:w-58 sm:h-58">
+            <div className="relative w-48 h-48 sm:w-58 sm:h-58 aspect-square">
               <div className="absolute inset-0 h-fit flex items-center justify-center z-10 rounded-full bg-linear-to-br dark:from-accent-purple/30 dark:to-accent-blue/30 from-accent-light-purple/30 to-accent-light-blue/30 backdrop-blur-xs border dark:border-white/10 border-light-border shadow-xl">
-                <img src={PP} alt="My personal picture" className="w-fit h-fit" />
+                <img src={PP} alt="My personal picture" className="w-full h-full object-cover" />
               </div>
 
               {/* Background Glow */}
