@@ -25,7 +25,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       }}
     >
       {/* Card Inner Glow Effect */}
-      <div className="absolute -z-10  inset-0 bg-linear-to-br dark:from-accent-purple/5 dark:to-accent-blue/5 from-accent-light-purple/5 to-accent-light-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute -z-10 inset-0 bg-linear-to-br dark:from-accent-purple/5 dark:to-accent-blue/5 from-accent-light-purple/5 to-accent-light-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       {/* Project Image */}
       <div className="relative w-full overflow-hidden">
@@ -38,7 +38,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <motion.img
           src={imageSrc}
           alt={title}
-          className="w-full h-max object-cover"
+          className="w-full h-auto object-cover"
           initial={{ scale: 1.0 }}
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.5 }}
