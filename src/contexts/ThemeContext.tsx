@@ -7,7 +7,7 @@ type ThemeContextType = {
 };
 
 const initialState: ThemeContextType = {
-  theme: "system",
+  theme: "dark",
   setTheme: () => null,
 };
 

@@ -196,7 +196,8 @@
 @layer base {
   body {
     @apply overflow-x-hidden;
-    @apply bg-dark-background text-white;
+    @apply bg-white dark:bg-dark-background;
+    transition: background-color 300ms ease;
     font-feature-settings: "rlig" 1, "calt" 1;
     overflow-y: auto;
   }

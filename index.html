@@ -32,6 +32,15 @@
   <!-- Theme color for modern browsers -->
   <meta name="theme-color" content="#ffffff">
 
+  <script>
+    (() => {
+      const savedTheme = localStorage.getItem('ar-theme');
+      const defaultTheme = savedTheme || 'dark';
+      document.documentElement.classList.add(defaultTheme);
+      document.documentElement.style.setProperty('--initial-color-mode', defaultTheme);
+    })();
+  </script>
+
   <!-- Current icon you are using -->
   <link href="/favicons/favicon.ico" rel="icon">
 
