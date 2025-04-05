@@ -16,9 +16,7 @@ export const createMessage = async (form: ContactForm) => {
       throw new Error(`Erreur HTTP: ${response.status}`);
     }
 
-    const data = await response.json();
-    console.log("Message sent successfully:", data);
-    return data;
+    return await response.json();
   } catch (error) {
     console.error("Sending error:", error);
     throw error;

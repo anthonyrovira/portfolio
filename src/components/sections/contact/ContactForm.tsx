@@ -56,16 +56,12 @@ const ContactForm = () => {
         message: DOMPurify.sanitize(data.message),
       };
 
-      // Submit the form data to Firebase
-      console.log("Form data to send to Firebase:", sanitizedData);
-
       let serverSuccess = false;
 
       // First try submitting to the server
       try {
         const response = await createMessage(sanitizedData);
-        console.log("Message sent successfully:", response);
-        serverSuccess = true;
+        serverSuccess = !!response;
       } catch (apiError) {
         console.error("Sending error:", apiError);
       }
@@ -74,7 +70,6 @@ const ContactForm = () => {
       if (!serverSuccess) {
         try {
           await addDoc(collection(db, "messages"), sanitizedData);
-          console.log("Message sent successfully");
         } catch (firebaseError) {
           console.error("Sending error:", firebaseError);
           // Firestore submission failed, we'll use the API as backup
