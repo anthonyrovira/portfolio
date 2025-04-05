@@ -9,7 +9,7 @@ export const LanguageProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [translations, setTranslations] = useState<AllTranslations>(allTranslations[language]);
 
   useEffect(() => {
-    localStorage.setItem("lang", language);
+    localStorage.setItem("ar-lang", language);
     setTranslations(allTranslations[language]);
     document.documentElement.lang = language;
   }, [language]);
