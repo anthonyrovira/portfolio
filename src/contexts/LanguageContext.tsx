@@ -1,14 +1,7 @@
 import { createContext } from "react";
 import { AllTranslations, Language } from "@/utils/translations/types";
-import {
-  aboutTranslations,
-  contactTranslations,
-  footerTranslations,
-  heroTranslations,
-  navbarTranslations,
-  portfolioTranslations,
-  reusablesTranslations,
-} from "@/utils/translations";
+import { allTranslations } from "@/utils/translations";
+import { detectLanguage } from "@/utils/i18n";
 
 interface LanguageContextType {
   language: Language;
@@ -18,15 +11,7 @@ interface LanguageContextType {
 
 // Create context with default values
 export const LanguageContext = createContext<LanguageContextType>({
-  language: "en",
+  language: detectLanguage(),
   setLanguage: () => {},
-  t: {
-    navbar: navbarTranslations.en,
-    hero: heroTranslations.en,
-    about: aboutTranslations.en,
-    portfolio: portfolioTranslations.en,
-    contact: contactTranslations.en,
-    footer: footerTranslations.en,
-    reusables: reusablesTranslations.en,
-  },
+  t: allTranslations[detectLanguage()],
 });
