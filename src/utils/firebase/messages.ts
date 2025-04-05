@@ -4,7 +4,7 @@ const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3000";
 
 export const createMessage = async (form: ContactForm) => {
   try {
-    const response = await fetch(`${apiUrl}/api/messages`, {
+    const response = await fetch(`${apiUrl}/messages`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

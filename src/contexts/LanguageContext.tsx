@@ -30,38 +30,3 @@ export const LanguageContext = createContext<LanguageContextType>({
     reusables: reusablesTranslations.en,
   },
 });
-
-// Custom hook to use the language context
-// export const useLanguage = () => useContext(LanguageContext);
-
-// Provider component
-// export const LanguageProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
-//   // Get preferred language from localStorage or default to 'en'
-//   const getInitialLanguage = (): Language => {
-//     const savedLanguage = localStorage.getItem("preferredLanguage") as Language;
-//     return savedLanguage && Object.keys(allTranslations).includes(savedLanguage) ? savedLanguage : "en";
-//   };
-
-//   const [language, setLanguage] = useState<Language>(getInitialLanguage());
-//   const [translations, setTranslations] = useState<AllTranslations>(allTranslations[language]);
-
-//   // Update translations when language changes
-//   useEffect(() => {
-//     setTranslations(allTranslations[language]);
-//     localStorage.setItem("preferredLanguage", language);
-//     document.documentElement.lang = language;
-//   }, [language]);
-
-//   // Set the initial html lang attribute
-//   useEffect(() => {
-//     document.documentElement.lang = language;
-//   }, []);
-
-//   const value = {
-//     language,
-//     setLanguage,
-//     t: translations,
-//   };
-
-//   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
-// };
