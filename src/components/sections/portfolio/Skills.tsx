@@ -12,7 +12,7 @@ type SkillsProps = {
 const Skills: FC<SkillsProps> = ({ skills }) => {
   const [activeCategory, setActiveCategory] = useState<SkillCategory>("frontend");
 
-  const skillCategories: SkillCategory[] = ["frontend", "backend", "database", "devops", "other"];
+  const skillCategories: SkillCategory[] = ["frontend", "backend", "database", "devops", "testing", "other"];
 
   const category: SkillItem[] = useMemo(() => {
     return skills.filter((s) => s.category.includes(activeCategory));

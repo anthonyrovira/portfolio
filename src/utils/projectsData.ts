@@ -1,4 +1,4 @@
-export type SkillCategory = "frontend" | "backend" | "database" | "devops" | "other";
+export type SkillCategory = "frontend" | "backend" | "database" | "devops" | "testing" | "other";
 
 export interface SkillItem {
   id: string;
@@ -69,14 +69,14 @@ export const techStack: SkillItem[] = [
     name: "Ansible",
     category: ["devops"],
     imageSrc: "pictures/ansible.webp",
-    proficiency: 2,
+    proficiency: 1,
   },
   {
     id: "aws",
     name: "AWS",
     category: ["devops"],
     imageSrc: "pictures/aws.webp",
-    proficiency: 2,
+    proficiency: 3,
   },
   {
     id: "docker",
@@ -111,7 +111,7 @@ export const techStack: SkillItem[] = [
     name: "Terraform",
     category: ["devops"],
     imageSrc: "pictures/terraform.webp",
-    proficiency: 1,
+    proficiency: 3,
   },
 
   // Frontend
@@ -155,13 +155,6 @@ export const techStack: SkillItem[] = [
     name: "Next.js",
     category: ["frontend"],
     imageSrc: "pictures/nextjs.webp",
-    proficiency: 4,
-  },
-  {
-    id: "playwright",
-    name: "Playwright",
-    category: ["frontend"],
-    imageSrc: "pictures/playwright.webp",
     proficiency: 4,
   },
   {
@@ -213,22 +206,8 @@ export const techStack: SkillItem[] = [
     imageSrc: "pictures/typescript.webp",
     proficiency: 5,
   },
-  {
-    id: "vitest",
-    name: "Vitest",
-    category: ["frontend"],
-    imageSrc: "pictures/vitest.webp",
-    proficiency: 5,
-  },
 
   // Other
-  {
-    id: "browserstack",
-    name: "BrowserStack",
-    category: ["other"],
-    imageSrc: "pictures/browserstack.webp",
-    proficiency: 2,
-  },
   {
     id: "cpp",
     name: "C++",
@@ -242,5 +221,35 @@ export const techStack: SkillItem[] = [
     category: ["other"],
     imageSrc: "pictures/labview.webp",
     proficiency: 5,
+  },
+
+  // Testing
+  {
+    id: "vitest",
+    name: "Vitest",
+    category: ["testing"],
+    imageSrc: "pictures/vitest.webp",
+    proficiency: 5,
+  },
+  {
+    id: "jest",
+    name: "Jest",
+    category: ["testing"],
+    imageSrc: "pictures/jest.webp",
+    proficiency: 4,
+  },
+  {
+    id: "playwright",
+    name: "Playwright",
+    category: ["testing"],
+    imageSrc: "pictures/playwright.webp",
+    proficiency: 4,
+  },
+  {
+    id: "browserstack",
+    name: "BrowserStack",
+    category: ["testing"],
+    imageSrc: "pictures/browserstack.webp",
+    proficiency: 2,
   },
 ];

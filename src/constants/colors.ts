@@ -392,4 +392,5 @@ export const colorGradients = [
   "from-purple-500 to-pink-600",
   "from-orange-400 to-amber-700",
   "from-red-500 to-rose-700",
+  "from-cyan-400 to-blue-800",
 ] as const;

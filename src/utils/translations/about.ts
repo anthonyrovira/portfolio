@@ -71,7 +71,7 @@ const en: AboutTranslations = {
 };
 
 const fr: AboutTranslations = {
-  title: "À Propos de",
+  title: "À propos de",
   titleHighlight: "moi",
   subtitle: "Je transforme vos idées en expériences digitales",
   job: "Développeur Frontend",
