@@ -1,3 +1,5 @@
+[![Deploy Frontend](https://github.com/anthonyrovira/portfolio/actions/workflows/deploy-frontend.yml/badge.svg)](https://github.com/anthonyrovira/portfolio/actions/workflows/deploy-frontend.yml)
+
 # Anthony Rovira - Personal Portfolio 🚀
 
 ![Portfolio Preview](public/pictures/portfolio.webp)
