@@ -8,7 +8,7 @@ export const createMessage = async (form: ContactForm) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "X-Internal-Secret": import.meta.env.API_INTERNAL || "",
+        "X-Internal-Secret": import.meta.env.VITE_API_INTERNAL_SECRET || "",
       },
       body: JSON.stringify(form),
     });

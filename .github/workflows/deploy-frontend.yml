@@ -46,6 +46,7 @@ jobs:
           VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}
           VITE_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.VITE_FIREBASE_MESSAGING_SENDER_ID }}
           VITE_API_URL: ${{vars.VITE_API_URL}}
+          VITE_API_INTERNAL_SECRET: ${{secrets.VITE_API_INTERNAL_SECRET}}
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
