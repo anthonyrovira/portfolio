@@ -50,7 +50,17 @@ export default defineConfig(({ mode }) => {
       outDir: "dist",
       cssMinify: true,
       manifest: true,
-      minify: true,
+      minify: "terser",
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true,
+          pure_funcs: ["console.log", "console.info", "console.debug", "console.warn"],
+        },
+        format: {
+          comments: false,
+        },
+      },
       chunkSizeWarningLimit: 1000,
       rollupOptions: {
         output: {
