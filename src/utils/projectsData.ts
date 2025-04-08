@@ -24,7 +24,13 @@ export const techStack: SkillItem[] = [
     imageSrc: "pictures/nodejs.webp",
     proficiency: 4,
   },
-
+  {
+    id: "honojs",
+    name: "HonoJS",
+    category: ["backend"],
+    imageSrc: "pictures/hono.webp",
+    proficiency: 4,
+  },
   {
     id: "swagger",
     name: "Swagger",
@@ -253,3 +259,19 @@ export const techStack: SkillItem[] = [
     proficiency: 2,
   },
 ];
+
+export const getRepoLabel = (index: number, totalRepos: number): string => {
+  if (totalRepos < 1) return "";
+  if (totalRepos === 1) return "GitHub";
+
+  switch (index) {
+    case 0:
+      return "Frontend";
+    case 1:
+      return "Backend";
+    case 2:
+      return "IaC";
+    default:
+      return "GitHub";
+  }
+};

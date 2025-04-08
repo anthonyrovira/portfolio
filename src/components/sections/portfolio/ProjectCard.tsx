@@ -5,6 +5,7 @@ import AnimatedSection, { fadeIn } from "../../ui/animations/AnimatedSection";
 import { Project } from "@/utils/translations/types";
 import Tags from "../../ui/common/Tags";
 import { useLanguage } from "@/hooks/useLanguage";
+import { getRepoLabel } from "@/utils/projectsData";
 
 type ProjectCardProps = {
   project: Project;
@@ -86,7 +87,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             whileTap={{ y: 0 }}
           >
             <GitHub className="w-4 h-4" />
-            {repoUrl.length > 1 ? (index === 0 ? "Frontend" : "Backend") : "GitHub"}
+            {getRepoLabel(index, repoUrl.length)}
           </motion.a>
         ))}
       </div>

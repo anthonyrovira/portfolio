@@ -108,6 +108,20 @@ export const tagColorMap: Record<
       light: "border-yellow-600/80",
     },
   },
+  honojs: {
+    bg: {
+      dark: "bg-honojs/50 hover:bg-honojs/90",
+      light: "bg-honojs hover:bg-honojs/80",
+    },
+    text: {
+      dark: "text-white/70",
+      light: "text-white",
+    },
+    border: {
+      dark: "border-white/30",
+      light: "border-honojs/80",
+    },
+  },
 
   // Databases
   mongodb: {
@@ -166,6 +180,62 @@ export const tagColorMap: Record<
     border: {
       dark: "border-vercel/20",
       light: "border-vercel/80",
+    },
+  },
+  aws: {
+    bg: {
+      dark: "bg-aws/10 hover:bg-aws/20",
+      light: "bg-aws/90 hover:bg-aws/80",
+    },
+    text: {
+      dark: "text-aws",
+      light: "text-white",
+    },
+    border: {
+      dark: "border-aws/30",
+      light: "border-aws/80",
+    },
+  },
+  terraform: {
+    bg: {
+      dark: "bg-terraform/10 hover:bg-terraform/20",
+      light: "bg-terraform/90 hover:bg-terraform/80",
+    },
+    text: {
+      dark: "text-terraform",
+      light: "text-white",
+    },
+    border: {
+      dark: "border-terraform/30",
+      light: "border-terraform/80",
+    },
+  },
+  prometheus: {
+    bg: {
+      dark: "bg-prometheus/10 hover:bg-prometheus/20",
+      light: "bg-prometheus/90 hover:bg-prometheus/80",
+    },
+    text: {
+      dark: "text-prometheus",
+      light: "text-white",
+    },
+    border: {
+      dark: "border-prometheus/30",
+      light: "border-prometheus/80",
+    },
+  },
+  grafana: {
+    bg: {
+      dark: "bg-grafana/10 hover:bg-grafana/20",
+      light: "bg-grafana/90 hover:bg-grafana/80",
+    },
+    text: {
+      dark: "text-grafana",
+      light: "text-white",
+    },
+    border: {
+      dark: "border-grafana/30",
+      light: "border-grafana/80",
     },
   },
 

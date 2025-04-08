@@ -74,6 +74,11 @@
   --color-formik: #4d77cf;
   --color-react-query: #3b82f6;
   --color-playwright: #4a9a4a;
+  --color-honojs: #5c5c5c;
+  --color-terraform: #7b42bc;
+  --color-aws: #ff9900;
+  --color-prometheus: #e6522c;
+  --color-grafana: #f46800;
 
   /* Socials colors */
   --color-linkedin: #0a66c2;

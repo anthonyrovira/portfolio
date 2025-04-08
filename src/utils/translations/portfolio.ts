@@ -14,17 +14,21 @@ const en: PortfolioTranslations = {
           id: "portfolio",
           title: "Personal Portfolio",
           description:
-            "A modern personal portfolio website built with React and Typescript, showcasing my projects, skills, and experiences.",
+            "This portfolio showcases my work through a modern and performant interface, optimally deployed and distributed on AWS (S3, CloudFront). The backend is orchestrated via Docker Compose on an EC2 instance, with the entire infrastructure provisioned using Infrastructure as Code (Terraform), including a reverse proxy and monitoring tools.",
           imageSrc: "pictures/portfolio.webp",
-          tags: ["react", "typescript", "tailwindcss", "firebase", "vercel"],
-          demoUrl: "https://anthonyrovira.com/",
-          repoUrl: ["https://github.com/anthonyrovira/portfolio"],
+          tags: ["react", "typescript", "tailwindcss", "firebase", "honojs", "terraform", "aws", "prometheus", "grafana"],
+          demoUrl: "",
+          repoUrl: [
+            "https://github.com/anthonyrovira/portfolio",
+            "https://github.com/anthonyrovira/portfolio_backend",
+            "https://github.com/anthonyrovira/portfolio_iac",
+          ],
         },
         {
           id: "ichiban-clone",
           title: "Ichiban Clone",
           description:
-            "A powerful replication of the Ichiban website, built with Astro and Typescript, aiming to improve the performance and reactivity of the original site, showcasing advanced web optimization techniques",
+            "This project is a clone of the Ichiban Bike website, developed with the Astro meta-framework for learning and practice purposes. It focuses on smooth scroll animations and stylized visual effects, while showcasing significant performance improvements over the original site.",
           imageSrc: "pictures/ichiban.webp",
           tags: ["typescript", "astro", "vercel"],
           demoUrl: "https://ichiban-clone.vercel.app/",
@@ -34,7 +38,7 @@ const en: PortfolioTranslations = {
           id: "insta-chef",
           title: "InstaChef",
           description:
-            "A modern web application designed to help users discover recipes based on the ingredients they already have. With a user-friendly interface and efficient search capabilities.",
+            "Instachef is a modern web application designed to help users discover recipes based on the ingredients they have. With a user-friendly interface and efficient search capabilities, Instachef makes cooking easier and more enjoyable.",
           imageSrc: "pictures/instachef.webp",
           tags: ["react", "typescript", "tailwindcss", "nextjs", "supabase", "vercel"],
           demoUrl: "https://instachef.vercel.app/",
@@ -43,7 +47,7 @@ const en: PortfolioTranslations = {
         {
           id: "terrifai",
           title: "TerrifAI",
-          description: "A web application that allows users to apply spooky AI-powered transformations to their images.",
+          description: `TerrifAI is a web application that allows users to apply spooky AI-powered transformations to their images using Cloudinary. Developed in just a few days for a hackathon organized by Cloudinary and midudev, it offers various eerie effects and an interactive image comparison.`,
           imageSrc: "pictures/terrifai.webp",
           tags: ["react", "typescript", "tailwindcss", "astro", "vercel"],
           demoUrl: "https://terrifai.vercel.app/",
@@ -56,14 +60,14 @@ const en: PortfolioTranslations = {
             "A full-stack web application that allows users to browse Marvel characters and comics, built with React and Typescript.",
           imageSrc: "pictures/marvel.webp",
           tags: ["react", "typescript", "tailwindcss", "nodejs", "express", "mongodb", "vercel"],
-          demoUrl: "https://marvel.vercel.app/",
+          demoUrl: "https://marvel-rvr.vercel.app/",
           repoUrl: ["https://github.com/anthonyrovira/marvel-frontend", "https://github.com/anthonyrovira/marvel-backend"],
         },
         {
           id: "airbnb-automation",
           title: "Airbnb Automation",
           description:
-            "A script that allows users to automate the process of booking Airbnb listings, built with NodeJS and Typescript.",
+            "Airbnb Automate is a TypeScript-based Node.js script that automates fetching Airbnb reservations and exporting them into a formatted Excel file, including key details and earnings information.",
           imageSrc: "pictures/airbnb_automation.webp",
           tags: ["nodejs", "typescript"],
           demoUrl: "",
@@ -216,17 +220,21 @@ const fr: PortfolioTranslations = {
           id: "portfolio",
           title: "Portfolio Personnel",
           description:
-            "Un site web de portfolio personnel moderne construit avec React et Typescript, présentant mes projets, compétences et expériences.",
+            "Ce portfolio présente mon travail à travers une interface moderne et performante, déployée et distribuée de manière optimale sur AWS (S3, CloudFront). Le backend est orchestré via Docker Compose sur une instance EC2, avec une infrastructure entièrement provisionnée par Infrastructure as Code (Terraform), incluant un reverse proxy et des outils de monitoring.",
           imageSrc: "pictures/portfolio.webp",
-          tags: ["react", "typescript", "tailwindcss", "firebase", "vercel"],
-          demoUrl: "https://anthonyrovira.com/",
-          repoUrl: ["https://github.com/anthonyrovira/portfolio"],
+          tags: ["react", "typescript", "tailwindcss", "firebase", "honojs", "terraform", "aws", "prometheus", "grafana"],
+          demoUrl: "",
+          repoUrl: [
+            "https://github.com/anthonyrovira/portfolio",
+            "https://github.com/anthonyrovira/portfolio_backend",
+            "https://github.com/anthonyrovira/portfolio_iac",
+          ],
         },
         {
           id: "ichiban-clone",
           title: "Ichiban Clone",
           description:
-            "Une réplication du site web d'Ichiban, construite avec React et Typescript, visant à reproduire l'apparence et la réactivité du site original.",
+            "Ce projet est un clone du site Ichiban Bike, développé avec le méta-framework Astro à des fins d'apprentissage et de pratique. Il met l'accent sur les animations de défilement fluides et les effets visuels stylisés, tout en démontrant des optimisations de performance significatives par rapport au site original.",
           imageSrc: "pictures/ichiban.webp",
           tags: ["react", "Typescript", "tailwindcss", "astro"],
           demoUrl: "https://ichiban-clone.vercel.app/",
@@ -236,7 +244,7 @@ const fr: PortfolioTranslations = {
           id: "insta-chef",
           title: "InstaChef",
           description:
-            "Une application web moderne conçue pour aider les utilisateurs à découvrir des recettes en fonction des ingrédients qu'ils ont déjà. Avec une interface conviviale et des capacités de recherche efficaces.",
+            "Instachef est une application web moderne qui permet de découvrir des recettes en fonction des ingrédients disponibles. Son interface conviviale et ses capacités de recherche efficaces simplifient et rendent la cuisine plus agréable.",
           imageSrc: "pictures/instachef.webp",
           tags: ["react", "typescript", "tailwindcss", "nextjs", "supabase", "vercel"],
           demoUrl: "https://instachef.vercel.app/",
@@ -245,8 +253,7 @@ const fr: PortfolioTranslations = {
         {
           id: "terrifai",
           title: "TerrifAI",
-          description:
-            "Une application web qui permet aux utilisateurs d'appliquer des transformations effrayantes alimentées par l'IA à leurs images.",
+          description: `TerrifAI est une application web permettant d'appliquer des transformations d'images "spooky" grâce à l'IA de Cloudinary. Développée en quelques jours dans le cadre d'un hackaton organisé par Cloudinary et midudev, elle offre des effets variés et une comparaison interactive des images.`,
           imageSrc: "pictures/terrifai.webp",
           tags: ["react", "typescript", "tailwindcss", "astro", "vercel"],
           demoUrl: "https://terrifai.vercel.app/",
@@ -259,14 +266,14 @@ const fr: PortfolioTranslations = {
             "Une application web full-stack qui permet aux utilisateurs de parcourir les personnages et les bandes dessinées de Marvel, construite avec React et Typescript.",
           imageSrc: "pictures/marvel.webp",
           tags: ["react", "typescript", "tailwindcss", "nodejs", "express", "mongodb", "vercel"],
-          demoUrl: "https://marvel.vercel.app/",
+          demoUrl: "https://marvel-rvr.vercel.app/",
           repoUrl: ["https://github.com/anthonyrovira/marvel-frontend", "https://github.com/anthonyrovira/marvel-backend"],
         },
         {
           id: "airbnb-automation",
           title: "Airbnb Automation",
           description:
-            "Un script qui permet aux utilisateurs d'automatiser le processus de réservation des annonces Airbnb, construit avec NodeJS et Typescript.",
+            "Airbnb Automate est un script Node.js en TypeScript qui automatise la récupération des réservations Airbnb et leur exportation dans un fichier Excel formaté, incluant les détails essentiels et les informations de revenus.",
           imageSrc: "pictures/airbnb_automation.webp",
           tags: ["nodejs", "typescript"],
           demoUrl: "",
@@ -410,17 +417,21 @@ const es: PortfolioTranslations = {
           id: "portfolio",
           title: "Portafolio Personal",
           description:
-            "Un sitio web de portafolio personal moderno construido con React y Typescript, presentando mis proyectos, habilidades y experiencias.",
+            "Este portfolio presenta mi trabajo a través de una interfaz moderna y de alto rendimiento, desplegada y distribuida de manera óptima en AWS (S3, CloudFront). El backend está orquestado mediante Docker Compose en una instancia EC2, con toda la infraestructura aprovisionada utilizando Infrastructure as Code (Terraform), incluyendo un reverse proxy y herramientas de monitorización.",
           imageSrc: "pictures/portfolio.webp",
-          tags: ["react", "typescript", "tailwindcss", "firebase", "vercel"],
-          demoUrl: "https://anthonyrovira.com/",
-          repoUrl: ["https://github.com/anthonyrovira/portfolio"],
+          tags: ["react", "typescript", "tailwindcss", "firebase", "honojs", "terraform", "aws", "prometheus", "grafana"],
+          demoUrl: "",
+          repoUrl: [
+            "https://github.com/anthonyrovira/portfolio",
+            "https://github.com/anthonyrovira/portfolio_backend",
+            "https://github.com/anthonyrovira/portfolio_iac",
+          ],
         },
         {
           id: "ichiban-clone",
           title: "Ichiban Clone",
           description:
-            "Una poderosa réplica del sitio web de Ichiban, construida con Astro y Typescript, con el objetivo de mejorar el rendimiento del sitio original, mostrando técnicas avanzadas de optimización web.",
+            "Este proyecto es un clon del sitio web Ichiban Bike, desarrollado con el meta-framework Astro con fines de aprendizaje y práctica. Se centra en animaciones de desplazamiento suaves y efectos visuales estilizados, al tiempo que demuestra mejoras de rendimiento significativas en comparación con el sitio original.",
           imageSrc: "pictures/ichiban.webp",
           tags: ["typescript", "astro", "vercel"],
           demoUrl: "https://ichiban-clone.vercel.app/",
@@ -430,7 +441,7 @@ const es: PortfolioTranslations = {
           id: "insta-chef",
           title: "InstaChef",
           description:
-            "Una aplicación web moderna diseñada para ayudar a los usuarios a descubrir recetas basadas en los ingredientes que ya tienen.",
+            "Instachef es una aplicación web moderna diseñada para ayudar a los usuarios a descubrir recetas basadas en los ingredientes que tienen disponibles. Con una interfaz intuitiva y capacidades de búsqueda eficientes, Instachef facilita y hace que cocinar sea más agradable.",
           imageSrc: "pictures/instachef.webp",
           tags: ["react", "typescript", "tailwindcss", "nextjs", "supabase", "vercel"],
           demoUrl: "https://instachef.vercel.app/",
@@ -439,8 +450,7 @@ const es: PortfolioTranslations = {
         {
           id: "terrifai",
           title: "TerrifAI",
-          description:
-            "Una aplicación web que permite a los usuarios aplicar transformaciones de IA espeluznantes a sus imágenes.",
+          description: `TerrifAI es una aplicación web que permite a los usuarios aplicar transformaciones de imágenes "spooky" gracias a la IA de Cloudinary. Desarrollada en pocos días en el marco de un hackathon organizado por Cloudinary y midudev, ofrece varios efectos espeluznantes y una comparación interactiva de las imágenes.`,
           imageSrc: "pictures/terrifai.webp",
           tags: ["react", "typescript", "tailwindcss", "astro", "vercel"],
           demoUrl: "https://terrifai.vercel.app/",
@@ -453,14 +463,14 @@ const es: PortfolioTranslations = {
             "Una aplicación web full-stack diseñada para permitir a los usuarios navegar por los personajes y las historietas de Marvel, construida con React y Typescript.",
           imageSrc: "pictures/marvel.webp",
           tags: ["react", "typescript", "tailwindcss", "nodejs", "express", "mongodb", "vercel"],
-          demoUrl: "https://marvel.vercel.app/",
+          demoUrl: "https://marvel-rvr.vercel.app/",
           repoUrl: ["https://github.com/anthonyrovira/marvel-frontend", "https://github.com/anthonyrovira/marvel-backend"],
         },
         {
           id: "airbnb-automation",
           title: "Airbnb Automation",
           description:
-            "Un script que permite a los usuarios automatizar el proceso de reserva de anuncios de Airbnb, construido con NodeJS y Typescript.",
+            "Airbnb Automate es un script de Node.js basado en TypeScript que automatiza la obtención de reservas de Airbnb y su exportación a un archivo Excel formateado, incluyendo detalles esenciales e información de ingresos.",
           imageSrc: "pictures/airbnb_automation.webp",
           tags: ["nodejs", "typescript"],
           demoUrl: "",
