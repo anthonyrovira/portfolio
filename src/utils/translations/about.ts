@@ -63,7 +63,7 @@ const en: AboutTranslations = {
         {
           name: "Spanish",
           flag: "spain",
-          level: "Fluent",
+          level: "C1",
         },
       ],
     },
@@ -133,7 +133,7 @@ const fr: AboutTranslations = {
         {
           name: "Espagnol",
           flag: "spain",
-          level: "Avancé",
+          level: "C1",
         },
       ],
     },
@@ -196,14 +196,14 @@ const es: AboutTranslations = {
           level: "Nativo",
         },
         {
-          name: "Anglais",
+          name: "Inglés",
           flag: "united-kingdom",
           level: "Graduado B2",
         },
         {
           name: "Español",
           flag: "spain",
-          level: "Avanzado",
+          level: "C1",
         },
       ],
     },
