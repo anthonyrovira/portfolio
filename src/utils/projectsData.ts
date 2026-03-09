@@ -1,4 +1,10 @@
-export type SkillCategory = "frontend" | "backend" | "database" | "devops" | "testing" | "other";
+export type SkillCategory =
+  | "frontend"
+  | "backend"
+  | "database"
+  | "devops"
+  | "testing"
+  | "other";
 
 export interface SkillItem {
   id: string;
@@ -85,6 +91,13 @@ export const techStack: SkillItem[] = [
     proficiency: 3,
   },
   {
+    id: "cloudflare",
+    name: "Cloudflare",
+    category: ["devops"],
+    imageSrc: "pictures/cloudflare.webp",
+    proficiency: 3,
+  },
+  {
     id: "docker",
     name: "Docker",
     category: ["devops"],
@@ -117,7 +130,7 @@ export const techStack: SkillItem[] = [
     name: "Terraform",
     category: ["devops"],
     imageSrc: "pictures/terraform.webp",
-    proficiency: 3,
+    proficiency: 2,
   },
 
   // Frontend
@@ -161,7 +174,7 @@ export const techStack: SkillItem[] = [
     name: "Next.js",
     category: ["frontend"],
     imageSrc: "pictures/nextjs.webp",
-    proficiency: 4,
+    proficiency: 5,
   },
   {
     id: "react",
@@ -219,14 +232,14 @@ export const techStack: SkillItem[] = [
     name: "C++",
     category: ["other"],
     imageSrc: "pictures/cpp.webp",
-    proficiency: 4,
+    proficiency: 3,
   },
   {
     id: "labview",
     name: "LabVIEW",
     category: ["other"],
     imageSrc: "pictures/labview.webp",
-    proficiency: 5,
+    proficiency: 4,
   },
 
   // Testing
@@ -242,7 +255,7 @@ export const techStack: SkillItem[] = [
     name: "Jest",
     category: ["testing"],
     imageSrc: "pictures/jest.webp",
-    proficiency: 4,
+    proficiency: 5,
   },
   {
     id: "playwright",

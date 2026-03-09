@@ -196,6 +196,20 @@ export const tagColorMap: Record<
       light: "border-aws/80",
     },
   },
+  cloudflare: {
+    bg: {
+      dark: "bg-cloudflare/10 hover:bg-cloudflare/20",
+      light: "bg-cloudflare/90 hover:bg-cloudflare/80",
+    },
+    text: {
+      dark: "text-cloudflare",
+      light: "text-white",
+    },
+    border: {
+      dark: "border-cloudflare/30",
+      light: "border-cloudflare/80",
+    },
+  },
   terraform: {
     bg: {
       dark: "bg-terraform/10 hover:bg-terraform/20",

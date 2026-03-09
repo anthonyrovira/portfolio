@@ -14,14 +14,13 @@ const en: PortfolioTranslations = {
           id: "portfolio",
           title: "Personal Portfolio",
           description:
-            "This portfolio showcases my work through a modern and performant interface, optimally deployed and distributed on AWS (S3, CloudFront). The backend is orchestrated via Docker Compose on an EC2 instance, with the entire infrastructure provisioned using Infrastructure as Code (Terraform), including a reverse proxy and monitoring tools.",
+            "This portfolio showcases my work through a modern and performant interface, deployed and distributed on Cloudflare Pages. The backend is orchestrated via Docker Compose on a server instance, including monitoring tools.",
           imageSrc: "pictures/portfolio.webp",
-          tags: ["react", "typescript", "tailwindcss", "firebase", "honojs", "terraform", "aws", "prometheus", "grafana"],
+          tags: ["react", "typescript", "tailwindcss", "firebase", "honojs", "cloudflare", "prometheus", "grafana"],
           demoUrl: "",
           repoUrl: [
             "https://github.com/anthonyrovira/portfolio",
             "https://github.com/anthonyrovira/portfolio_backend",
-            "https://github.com/anthonyrovira/portfolio_iac",
           ],
         },
         {
@@ -220,14 +219,13 @@ const fr: PortfolioTranslations = {
           id: "portfolio",
           title: "Portfolio Personnel",
           description:
-            "Ce portfolio présente mon travail à travers une interface moderne et performante, déployée et distribuée de manière optimale sur AWS (S3, CloudFront). Le backend est orchestré via Docker Compose sur une instance EC2, avec une infrastructure entièrement provisionnée par Infrastructure as Code (Terraform), incluant un reverse proxy et des outils de monitoring.",
+            "Ce portfolio présente mon travail à travers une interface moderne et performante, déployée et distribuée sur Cloudflare Pages. Le backend est orchestré via Docker Compose sur un serveur, incluant des outils de monitoring.",
           imageSrc: "pictures/portfolio.webp",
-          tags: ["react", "typescript", "tailwindcss", "firebase", "honojs", "terraform", "aws", "prometheus", "grafana"],
+          tags: ["react", "typescript", "tailwindcss", "firebase", "honojs", "cloudflare", "prometheus", "grafana"],
           demoUrl: "",
           repoUrl: [
             "https://github.com/anthonyrovira/portfolio",
             "https://github.com/anthonyrovira/portfolio_backend",
-            "https://github.com/anthonyrovira/portfolio_iac",
           ],
         },
         {
@@ -417,14 +415,13 @@ const es: PortfolioTranslations = {
           id: "portfolio",
           title: "Portafolio Personal",
           description:
-            "Este portfolio presenta mi trabajo a través de una interfaz moderna y de alto rendimiento, desplegada y distribuida de manera óptima en AWS (S3, CloudFront). El backend está orquestado mediante Docker Compose en una instancia EC2, con toda la infraestructura aprovisionada utilizando Infrastructure as Code (Terraform), incluyendo un reverse proxy y herramientas de monitorización.",
+            "Este portafolio presenta mi trabajo a través de una interfaz moderna y de alto rendimiento, desplegada y distribuida en Cloudflare Pages. El backend está orquestado mediante Docker Compose en un servidor, incluyendo herramientas de monitorización.",
           imageSrc: "pictures/portfolio.webp",
-          tags: ["react", "typescript", "tailwindcss", "firebase", "honojs", "terraform", "aws", "prometheus", "grafana"],
+          tags: ["react", "typescript", "tailwindcss", "firebase", "honojs", "cloudflare", "prometheus", "grafana"],
           demoUrl: "",
           repoUrl: [
             "https://github.com/anthonyrovira/portfolio",
             "https://github.com/anthonyrovira/portfolio_backend",
-            "https://github.com/anthonyrovira/portfolio_iac",
           ],
         },
         {
