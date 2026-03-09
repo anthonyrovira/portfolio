@@ -35,3 +35,6 @@ stats.html
 *.key
 *.crt
 secrets/
+
+.claude/
+CLAUDE.md
