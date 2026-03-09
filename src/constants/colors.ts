@@ -64,6 +64,20 @@ export const tagColorMap: Record<
       light: "border-nextjs/80",
     },
   },
+  vite: {
+    bg: {
+      dark: "bg-vite/10 hover:bg-vite/20",
+      light: "bg-vite/90 hover:bg-vite/80",
+    },
+    text: {
+      dark: "text-vite",
+      light: "text-white",
+    },
+    border: {
+      dark: "border-vite/30",
+      light: "border-vite/80",
+    },
+  },
   astro: {
     bg: {
       dark: "bg-astro/10 hover:bg-astro/20",
@@ -208,6 +222,34 @@ export const tagColorMap: Record<
     border: {
       dark: "border-cloudflare/30",
       light: "border-cloudflare/80",
+    },
+  },
+  gitlab: {
+    bg: {
+      dark: "bg-gitlab/10 hover:bg-gitlab/20",
+      light: "bg-gitlab/90 hover:bg-gitlab/80",
+    },
+    text: {
+      dark: "text-gitlab",
+      light: "text-white",
+    },
+    border: {
+      dark: "border-gitlab/30",
+      light: "border-gitlab/80",
+    },
+  },
+  github: {
+    bg: {
+      dark: "bg-github/10 hover:bg-github/20",
+      light: "bg-github/90 hover:bg-github/80",
+    },
+    text: {
+      dark: "text-github",
+      light: "text-white",
+    },
+    border: {
+      dark: "border-github/30",
+      light: "border-github/80",
     },
   },
   terraform: {

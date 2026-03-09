@@ -112,6 +112,20 @@ export const techStack: SkillItem[] = [
     proficiency: 4,
   },
   {
+    id: "gitlab",
+    name: "GitLab",
+    category: ["devops"],
+    imageSrc: "pictures/gitlab.webp",
+    proficiency: 3,
+  },
+  {
+    id: "github",
+    name: "GitHub",
+    category: ["devops"],
+    imageSrc: "pictures/github.webp",
+    proficiency: 4,
+  },
+  {
     id: "grafana",
     name: "Grafana",
     category: ["devops"],
@@ -174,6 +188,13 @@ export const techStack: SkillItem[] = [
     name: "Next.js",
     category: ["frontend"],
     imageSrc: "pictures/nextjs.webp",
+    proficiency: 5,
+  },
+  {
+    id: "vite",
+    name: "Vite",
+    category: ["frontend"],
+    imageSrc: "pictures/vite.webp",
     proficiency: 5,
   },
   {

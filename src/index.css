@@ -76,6 +76,9 @@
   --color-playwright: #4a9a4a;
   --color-honojs: #5c5c5c;
   --color-terraform: #7b42bc;
+  --color-gitlab: #e53935;
+  --color-github: #181717;
+  --color-vite: #646cff;
   --color-aws: #ff9900;
   --color-cloudflare: #f38020;
   --color-prometheus: #e6522c;
