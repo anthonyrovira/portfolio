@@ -17,16 +17,20 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, color }) => {
       variants={fadeIn("up", 0.2)}
       viewport={{ once: true, margin: "-100px" }}
       whileHover={{
-        boxShadow: "0 10px 25px -5px rgba(75, 0, 130, 0.3), 0 8px 10px -6px rgba(75, 0, 130, 0.2)",
+        boxShadow:
+          "0 10px 25px -5px rgba(75, 0, 130, 0.3), 0 8px 10px -6px rgba(75, 0, 130, 0.2)",
         y: -5,
       }}
     >
       {/* Content */}
       <div className="flex flex-col items-center justify-center p-6 space-y-4 z-10">
-        <motion.div className="relative w-16 h-16 z-0 flex items-center justify-center " whileHover="hover">
+        <motion.div
+          className="relative w-16 h-16 z-0 flex items-center justify-center "
+          whileHover="hover"
+        >
           {/* Glowing Orb */}
           <motion.div
-            className="absolute inset-0 rounded-full bg-gradient-to-br from-accent-purple to-accent-blue blur-lg "
+            className="absolute inset-0 rounded-full bg-linear-to-br from-accent-purple to-accent-blue blur-lg "
             variants={{
               hover: { scale: 1.2, opacity: 1 },
             }}
@@ -42,12 +46,16 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, color }) => {
             }}
             transition={{ duration: 0.2 }}
           >
-            <img src={imageSrc} alt={name} className="w-full h-full object-contain" />
+            <img
+              src={imageSrc}
+              alt={name}
+              className="w-full h-full object-contain"
+            />
           </motion.div>
         </motion.div>
 
         {/* Tech Name */}
-        <h3 className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-accent-purple to-accent-blue text-center z-10">
+        <h3 className="text-xl font-semibold bg-clip-text text-transparent bg-linear-to-r from-accent-purple to-accent-blue text-center z-10">
           {name}
         </h3>
 
@@ -58,7 +66,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, color }) => {
               key={i}
               className={clsx(
                 "w-3 h-3 rounded-full transition-colors duration-300",
-                i < proficiency ? `bg-gradient-to-br ${color}` : "bg-gray-700/30"
+                i < proficiency ? `bg-linear-to-br ${color}` : "bg-gray-700/30",
               )}
             />
           ))}

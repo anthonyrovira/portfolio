@@ -10,12 +10,16 @@ interface LanguageSwitcherProps {
   variant?: "buttons" | "dropdown";
 }
 
-const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ variant = "dropdown" }) => {
+const LanguageSwitcher: FC<LanguageSwitcherProps> = ({
+  variant = "dropdown",
+}) => {
   const { language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
   // Find the current language label
-  const currentLanguage = languageOptions.find((option) => option.code === language);
+  const currentLanguage = languageOptions.find(
+    (option) => option.code === language,
+  );
 
   // Handle language change
   const handleLanguageChange = (lang: Language) => {
@@ -44,7 +48,11 @@ const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ variant = "dropdown" }) =
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <img src={`/pictures/${option.flag}.webp`} alt={option.label} className="w-auto h-full rounded-md" />
+            <img
+              src={`/pictures/${option.flag}.webp`}
+              alt={option.label}
+              className="w-auto h-full rounded-md"
+            />
           </motion.button>
         ))}
       </div>
@@ -65,7 +73,11 @@ const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ variant = "dropdown" }) =
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <img src={`/pictures/${currentLanguage?.flag}.webp`} alt={currentLanguage?.label} className="w-auto h-full rounded-sm" />
+        <img
+          src={`/pictures/${currentLanguage?.flag}.webp`}
+          alt={currentLanguage?.label}
+          className="w-auto h-full rounded-sm"
+        />
 
         <ChevronDown
           data-testid="chevron-icon"
@@ -75,7 +87,7 @@ const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ variant = "dropdown" }) =
 
       {isOpen && (
         <motion.div
-          className="absolute right-0 mt-2 p-1 dark:bg-dark-light/80 backdrop-blur-md border border-white/10 rounded-md shadow-lg z-10 min-w-[120px] w-max"
+          className="absolute right-0 mt-2 p-1 dark:bg-dark-light/80 backdrop-blur-md border border-white/10 rounded-md shadow-lg z-10 min-w-30 w-max"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
@@ -91,13 +103,19 @@ const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ variant = "dropdown" }) =
                 "w-full flex flex-row items-center px-4 py-2 rounded-sm",
                 language === option.code
                   ? "bg-linear-to-r dark:from-accent-purple/20 dark:to-accent-blue/20 from-accent-purple/10 to-accent-blue/10"
-                  : ""
+                  : "",
               )}
               onClick={() => handleLanguageChange(option.code as Language)}
               whileHover={{ x: 3, backgroundColor: "rgba(255,255,255,0.05)" }}
             >
-              <img src={`/pictures/${option.flag}.webp`} alt={option.label} className="w-auto h-6 mr-2" />
-              <span className="text-base text-text-light dark:text-white">{option.label}</span>
+              <img
+                src={`/pictures/${option.flag}.webp`}
+                alt={option.label}
+                className="w-auto h-6 mr-2"
+              />
+              <span className="text-base text-text-light dark:text-white">
+                {option.label}
+              </span>
             </motion.button>
           ))}
         </motion.div>

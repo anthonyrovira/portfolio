@@ -10,9 +10,17 @@ type SkillsProps = {
 };
 
 const Skills: FC<SkillsProps> = ({ skills }) => {
-  const [activeCategory, setActiveCategory] = useState<SkillCategory>("frontend");
+  const [activeCategory, setActiveCategory] =
+    useState<SkillCategory>("frontend");
 
-  const skillCategories: SkillCategory[] = ["frontend", "backend", "database", "devops", "testing", "other"];
+  const skillCategories: SkillCategory[] = [
+    "frontend",
+    "backend",
+    "database",
+    "devops",
+    "testing",
+    "other",
+  ];
 
   const category: SkillItem[] = useMemo(() => {
     return skills.filter((s) => s.category.includes(activeCategory));
@@ -34,9 +42,9 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
             className={clsx(
               "px-4 sm:px-5 py-2 sm:py-3 capitalize rounded-full text-xs sm:text-sm font-medium transition-colors backdrop-blur-xs shadow-xl",
               activeCategory === category
-                ? `bg-gradient-to-br ${getCategoryColor(category)} saturate-50 text-white`
+                ? `bg-linear-to-br ${getCategoryColor(category)} saturate-50 text-white`
                 : "dark:bg-white/5 bg-black/5 dark:border-white/10 border-light-border hover:bg-white/20 text-text-light",
-              "flex-shrink-0 min-w-max"
+              "shrink-0 min-w-max",
             )}
             onClick={() => setActiveCategory(category)}
           >
@@ -46,9 +54,17 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
       </div>
 
       {/* Skills grid */}
-      <motion.div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8" initial="hidden" whileInView="show">
+      <motion.div
+        className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8"
+        initial="hidden"
+        whileInView="show"
+      >
         {category.map((skill) => (
-          <SkillCard key={`${skill.id}-${category}`} skill={skill} color={getCategoryColor(activeCategory)} />
+          <SkillCard
+            key={`${skill.id}-${category}`}
+            skill={skill}
+            color={getCategoryColor(activeCategory)}
+          />
         ))}
       </motion.div>
     </>
