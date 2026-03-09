@@ -8,7 +8,7 @@ const en: AboutTranslations = {
   description:
     "I'm a passionate frontend web development professional dedicated to transforming creative ideas into engaging digital experiences. With a focus on clean code and intuitive user interfaces, I bring designs to life through modern web technologies and frameworks.",
   cv: {
-    url: "https://drive.google.com/uc?export=download&id=1-mcc-AHcZEPt7XG4FlXxCBHFAwBnkxvn",
+    url: "https://drive.google.com/uc?export=download&id=11cMuS0zcpGrvU-QtA9Mdw3cYf3Y-Ge9m",
     buttonText: "Download my CV",
   },
   cards: {
@@ -43,7 +43,8 @@ const en: AboutTranslations = {
         {
           school: "University of Paris-Saclay",
           date: "2016",
-          description: "Electronics, Electrical Energy & Automation Master's degree",
+          description:
+            "Electronics, Electrical Energy & Automation Master's degree",
         },
       ],
     },
@@ -78,7 +79,7 @@ const fr: AboutTranslations = {
   description:
     "Je suis un développeur web frontend passionné, dédié à transformer des idées créatives en expériences numériques captivantes. Avec un accent mis sur le code propre et les interfaces utilisateur intuitives, je (re)donne vie aux designs grâce aux technologies et frameworks web modernes.",
   cv: {
-    url: "https://drive.google.com/uc?export=download&id=1-jdMnhED5FLZ1X9OGENo7PHI-ORHbF8b",
+    url: "https://drive.google.com/uc?export=download&id=134fL9AMCQqorXjnzNf7-0-PZ6qtMvFcd",
     buttonText: "Télécharger mon CV",
   },
   cards: {
@@ -113,7 +114,8 @@ const fr: AboutTranslations = {
         {
           school: "Université de Paris-Saclay",
           date: "2016",
-          description: "Master en Electronique, Energie Electrique & Automatique",
+          description:
+            "Master en Electronique, Energie Electrique & Automatique",
         },
       ],
     },
@@ -148,7 +150,7 @@ const es: AboutTranslations = {
   description:
     "Soy un profesional apasionado del desarrollo web frontend, dedicado a transformar ideas creativas en experiencias digitales atractivas. Con un enfoque en código limpio e interfaces de usuario intuitivas, doy vida a los diseños a través de tecnologías y frameworks web modernos.",
   cv: {
-    url: "https://drive.google.com/uc?export=download&id=1-pBj9FVr3CoO2ifbP_KMmVrf8jOcBLBJ",
+    url: "https://drive.google.com/uc?export=download&id=11w8RTJJu8G6qyQnjjH08RSDOhudJpoGZ",
     buttonText: "Descargar mi CV",
   },
   cards: {
@@ -183,7 +185,8 @@ const es: AboutTranslations = {
         {
           school: "Universidad de Paris-Saclay",
           date: "2016",
-          description: "Máster en Electrónica, Energía Eléctrica y Automatización",
+          description:
+            "Máster en Electrónica, Energía Eléctrica y Automatización",
         },
       ],
     },

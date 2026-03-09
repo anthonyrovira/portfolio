@@ -3,7 +3,9 @@ import { Download, Sparkles } from "lucide-react";
 import AboutCard from "./AboutCard";
 import { AboutCardType } from "@/utils/translations/types";
 import { useLanguage } from "@/hooks/useLanguage";
-import AnimatedSection, { fadeIn } from "@/components/ui/animations/AnimatedSection";
+import AnimatedSection, {
+  fadeIn,
+} from "@/components/ui/animations/AnimatedSection";
 
 const About = () => {
   const { t } = useLanguage();
@@ -22,7 +24,10 @@ const About = () => {
       <div className="absolute -z-10 inset-0 dark:bg-[radial-gradient(circle_at_70%_80%,rgba(0,216,255,0.1),transparent_45%)] bg-[radial-gradient(circle_at_70%_80%,rgba(76,138,236,0.05),transparent_45%)]" />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 mt-20 sm:mt-8 md:mt-12">
-        <AnimatedSection variants={fadeIn("down", 0)} className="text-center mb-2">
+        <AnimatedSection
+          variants={fadeIn("down", 0)}
+          className="text-center mb-2"
+        >
           <h2 className="text-4xl sm:text-5xl font-bold dark:text-white text-text-light_secondary mb-4">
             {t.about.title}
             <span className="bg-linear-to-r from-accent-purple to-accent-blue text-transparent bg-clip-text">
@@ -37,7 +42,7 @@ const About = () => {
         >
           <div className="flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-purple-400" />
-            <p className="text-pretty text-center text-text-light_secondary dark:text-gray-400 text-base sm:text-lg break-words max-w-3xs sm:max-w-lg md:max-w-xl">
+            <p className="text-pretty text-center text-text-light_secondary dark:text-gray-400 text-base sm:text-lg wrap-break-word max-w-3xs sm:max-w-lg md:max-w-xl">
               {t.about.subtitle}
             </p>
             <Sparkles className="w-5 h-5 text-purple-400" />
@@ -46,10 +51,17 @@ const About = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-8 items-center">
           {/* Profile Picture */}
-          <AnimatedSection variants={fadeIn("right", 0.3)} className="md:col-span-2 flex justify-center md:justify-start">
+          <AnimatedSection
+            variants={fadeIn("right", 0.3)}
+            className="md:col-span-2 flex justify-center md:justify-start"
+          >
             <div className="relative w-48 h-48 sm:w-58 sm:h-58 aspect-square">
               <div className="absolute inset-0 h-fit flex items-center justify-center z-10 rounded-full bg-linear-to-br dark:from-accent-purple/30 dark:to-accent-blue/30 from-accent-light-purple/30 to-accent-light-blue/30 backdrop-blur-xs border dark:border-white/10 border-light-border shadow-xl">
-                <img src={PP} alt="My personal picture" className="w-full h-full object-cover" />
+                <img
+                  src={PP}
+                  alt="My personal picture"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Background Glow */}
@@ -58,9 +70,15 @@ const About = () => {
           </AnimatedSection>
 
           {/* Content */}
-          <AnimatedSection variants={fadeIn("left", 0.4)} className="md:col-span-6 sm: ml-0 md:ml-10 text-center md:text-left">
+          <AnimatedSection
+            variants={fadeIn("left", 0.4)}
+            className="md:col-span-6 sm: ml-0 md:ml-10 text-center md:text-left"
+          >
             <h3 className="text-3xl font-bold dark:text-white text-text-light_secondary mb-2">
-              Anthony <span className="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">Rovira</span>
+              Anthony{" "}
+              <span className="bg-linear-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">
+                Rovira
+              </span>
             </h3>
             <h4 className="text-xl bg-linear-to-r from-accent-purple to-accent-blue text-transparent bg-clip-text font-semibold mb-6">
               {t.about.job}
@@ -90,7 +108,11 @@ const About = () => {
         {/* Cards */}
         <div className="h-full mt-10 md:mt-12 grid grid-cols-1 lg:grid-cols-3 mx-auto md:px-20 lg:px-0 gap-6">
           {cardsTypes.map((cardType, index) => (
-            <AboutCard type={cardType} key={cardType} animationDelay={index * 0.4} />
+            <AboutCard
+              type={cardType}
+              key={cardType}
+              animationDelay={index * 0.4}
+            />
           ))}
         </div>
       </div>

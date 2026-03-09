@@ -16,13 +16,18 @@ const AboutCard = ({ type, animationDelay }: CardProps) => {
 
   const overallYearsOfExperience = useMemo(() => {
     const amountOfJobs = t.about.cards.experience.jobs.length;
-    const startDate = new Date(t.about.cards.experience.jobs[amountOfJobs - 1].startDate);
+    const startDate = new Date(
+      t.about.cards.experience.jobs[amountOfJobs - 1].startDate,
+    );
     const today = new Date();
 
     return (
       today.getFullYear() -
       startDate.getFullYear() -
-      (today < new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate()) ? 1 : 0)
+      (today <
+      new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate())
+        ? 1
+        : 0)
     );
   }, [t.about.cards.experience.jobs]);
 
@@ -48,10 +53,13 @@ const AboutCard = ({ type, animationDelay }: CardProps) => {
   const color = colorMap[type];
 
   return (
-    <AnimatedSection variants={fadeIn("up", animationDelay)} className="group h-full">
+    <AnimatedSection
+      variants={fadeIn("up", animationDelay)}
+      className="group h-full"
+    >
       <div className="relative z-10 bg-gray-900/50 backdrop-blur-lg rounded-2xl p-5 border border-white/10 overflow-hidden transition-colors duration-300 hover:scale-105 hover:shadow-2xl h-full flex flex-col justify-start">
         <div
-          className={`absolute -z-10 inset-0 bg-gradient-to-br ${color} opacity-50 group-hover:opacity-70 dark:opacity-10 dark:group-hover:opacity-20 transition-opacity duration-300`}
+          className={`absolute -z-10 inset-0 bg-linear-to-br ${color} opacity-50 group-hover:opacity-70 dark:opacity-10 dark:group-hover:opacity-20 transition-opacity duration-300`}
         />
 
         {type === "experience" && (
@@ -73,19 +81,23 @@ const AboutCard = ({ type, animationDelay }: CardProps) => {
                     "flex items-center justify-between space-x-2 p-2 rounded-lg",
                     index === 0
                       ? "bg-linear-to-r from-accent-purple/20 to-accent-blue/20 dark:border-white/10 border-border-light border"
-                      : "bg-white/5"
+                      : "bg-white/5",
                   )}
                 >
                   <span
-                    className={`text-sm flex-grow text-pretty ${
-                      index === 0 ? "text-white dark:text-gray-200" : "text-white dark:text-gray-300 "
+                    className={`text-sm grow text-pretty ${
+                      index === 0
+                        ? "text-white dark:text-gray-200"
+                        : "text-white dark:text-gray-300 "
                     }`}
                   >
                     {job.jobTitle}
                   </span>
                   <span
                     className={`text-sm min-w-max text-end ${
-                      index === 0 ? "text-white dark:text-gray-300" : "text-white dark:text-gray-400 "
+                      index === 0
+                        ? "text-white dark:text-gray-300"
+                        : "text-white dark:text-gray-400 "
                     }`}
                   >{`${jobsYearsOfExperience[index]} ${t.reusables.years}`}</span>
                 </li>
@@ -100,19 +112,32 @@ const AboutCard = ({ type, animationDelay }: CardProps) => {
               <div className="w-16 h-16 rounded-full flex items-center justify-center bg-white/10 transition-transform group-hover:rotate-6 mr-4">
                 <Award className="w-8 h-8 text-white" />
               </div>
-              <p className="text-sm uppercase tracking-wider text-white dark:text-gray-300">{t.about.cards[type].title}</p>
+              <p className="text-sm uppercase tracking-wider text-white dark:text-gray-300">
+                {t.about.cards[type].title}
+              </p>
             </div>
             <ul className="flex flex-col gap-3">
               {t.about.cards.education.degrees.map((degree, index) => (
-                <li key={index} className="flex items-center space-x-2 bg-white/5 p-2 rounded-lg">
+                <li
+                  key={index}
+                  className="flex items-center space-x-2 bg-white/5 p-2 rounded-lg"
+                >
                   <div className="flex flex-col gap-1 w-full">
                     <div className="w-full flex justify-between items-center">
-                      <span className="text-sm font-semibold text-white dark:text-gray-300">{degree.school}</span>
-                      <span className="text-sm text-end text-white dark:text-gray-400">{degree.date}</span>
+                      <span className="text-sm font-semibold text-white dark:text-gray-300">
+                        {degree.school}
+                      </span>
+                      <span className="text-sm text-end text-white dark:text-gray-400">
+                        {degree.date}
+                      </span>
                     </div>
                     <div className="flex flex-col mt-1">
-                      <span className="text-sm text-pretty text-white dark:text-gray-300">{degree.description}</span>
-                      <span className="text-sm text-pretty text-white dark:text-gray-300">{degree.score}</span>
+                      <span className="text-sm text-pretty text-white dark:text-gray-300">
+                        {degree.description}
+                      </span>
+                      <span className="text-sm text-pretty text-white dark:text-gray-300">
+                        {degree.score}
+                      </span>
                     </div>
                   </div>
                 </li>
@@ -136,10 +161,21 @@ const AboutCard = ({ type, animationDelay }: CardProps) => {
 
             <ul className="flex flex-col gap-3">
               {t.about.cards.languages.list.map((language, index) => (
-                <li key={index} className="flex items-center space-x-2 bg-white/5 p-2 rounded-lg">
-                  <img src={`/pictures/${language.flag}.webp`} alt={language.name} className="w-6 h-6 rounded-sm" />
-                  <span className="text-sm text-white dark:text-gray-300 flex-grow">{language.name}</span>
-                  <span className="text-sm text-white dark:text-gray-400 text-end">{language.level}</span>
+                <li
+                  key={index}
+                  className="flex items-center space-x-2 bg-white/5 p-2 rounded-lg"
+                >
+                  <img
+                    src={`/pictures/${language.flag}.webp`}
+                    alt={language.name}
+                    className="w-6 h-6 rounded-sm"
+                  />
+                  <span className="text-sm text-white dark:text-gray-300 grow">
+                    {language.name}
+                  </span>
+                  <span className="text-sm text-white dark:text-gray-400 text-end">
+                    {language.level}
+                  </span>
                 </li>
               ))}
             </ul>
