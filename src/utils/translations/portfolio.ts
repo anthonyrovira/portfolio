@@ -16,7 +16,18 @@ const en: PortfolioTranslations = {
           description:
             "This portfolio showcases my work through a modern and performant interface, deployed and distributed on Cloudflare Pages. The backend is orchestrated via Docker Compose on a server instance, including monitoring tools.",
           imageSrc: "pictures/portfolio.webp",
-          tags: ["react", "typescript", "tailwindcss", "firebase", "honojs", "cloudflare", "prometheus", "grafana"],
+          tags: [
+            "react",
+            "typescript",
+            "tailwindcss",
+            "vite",
+            "github",
+            "firebase",
+            "honojs",
+            "cloudflare",
+            "prometheus",
+            "grafana",
+          ],
           demoUrl: "",
           repoUrl: [
             "https://github.com/anthonyrovira/portfolio",
@@ -39,7 +50,14 @@ const en: PortfolioTranslations = {
           description:
             "Instachef is a modern web application designed to help users discover recipes based on the ingredients they have. With a user-friendly interface and efficient search capabilities, Instachef makes cooking easier and more enjoyable.",
           imageSrc: "pictures/instachef.webp",
-          tags: ["react", "typescript", "tailwindcss", "nextjs", "supabase", "vercel"],
+          tags: [
+            "react",
+            "typescript",
+            "tailwindcss",
+            "nextjs",
+            "supabase",
+            "vercel",
+          ],
           demoUrl: "https://instachef.vercel.app/",
           repoUrl: ["https://github.com/anthonyrovira/insta-chef"],
         },
@@ -58,9 +76,20 @@ const en: PortfolioTranslations = {
           description:
             "A full-stack web application that allows users to browse Marvel characters and comics, built with React and Typescript.",
           imageSrc: "pictures/marvel.webp",
-          tags: ["react", "typescript", "tailwindcss", "nodejs", "express", "mongodb", "vercel"],
+          tags: [
+            "react",
+            "typescript",
+            "tailwindcss",
+            "nodejs",
+            "express",
+            "mongodb",
+            "vercel",
+          ],
           demoUrl: "https://marvel-rvr.vercel.app/",
-          repoUrl: ["https://github.com/anthonyrovira/marvel-frontend", "https://github.com/anthonyrovira/marvel-backend"],
+          repoUrl: [
+            "https://github.com/anthonyrovira/marvel-frontend",
+            "https://github.com/anthonyrovira/marvel-backend",
+          ],
         },
         {
           id: "airbnb-automation",
@@ -89,6 +118,31 @@ const en: PortfolioTranslations = {
       tabName: "Experiences",
       content: [
         {
+          id: "numspot",
+          company: "Numspot",
+          position: "Frontend Developer",
+          startDate: "2025-07-15",
+          endDate: "2026-02-28",
+          location: "Paris, France",
+          description:
+            "Numspot is a French sovereign cloud provider delivering secure, trusted cloud services to businesses and public-sector organizations.",
+          bulletPoints: [
+            "Built a Design System with Vite.js and published it as an internal npm package.",
+            "Set up CI/CD pipelines for publishing internal npm packages to GitLab Registry.",
+            "Ongoing development and improvement of the user console (Next.js).",
+          ],
+          url: "https://numspot.com/",
+          tags: [
+            "react",
+            "typescript",
+            "nextjs",
+            "tailwindcss",
+            "vite",
+            "gitlab",
+          ],
+          imageSrc: "pictures/numspot.webp",
+        },
+        {
           id: "linxea",
           company: "Linxea",
           position: "Frontend Developer",
@@ -96,14 +150,11 @@ const en: PortfolioTranslations = {
           endDate: "2024-12-31",
           location: "Paris, France",
           description:
-            "Specialized in savings products, Linxea is a leading online broker in France, offering a wide range of financial products and services to its clients.",
+            "Linxea is a French online broker specializing in savings products, offering a wide range of financial solutions.",
           bulletPoints: [
-            "Developed a React codebase with TypeScript.",
-            "Used Redux, Redux-Saga, Formik, and React-Query for state management and forms.",
-            "Implemented unit tests using Jest and Testing Library.",
-            "Created and managed Storybook to build a comprehensive Design System.",
-            "Contributed to the implementation of end-to-end tests with Playwright.",
-            "Wrote technical documentation (code conventions, feature documentation, training materials, etc.).",
+            "Frontend development with React/TypeScript and Redux, Redux-Saga, Formik and React-Query for state management and complex forms.",
+            "Design of a multi-step subscription tunnel with validation, and contribution to unit testing (Jest, Testing Library) and end-to-end testing (Playwright).",
+            "Creation and maintenance of a Design System with Storybook, and writing of technical documentation (coding conventions, features, training materials).",
           ],
           url: "https://www.linxea.com/",
           tags: [
@@ -111,6 +162,7 @@ const en: PortfolioTranslations = {
             "typescript",
             "redux",
             "storybook",
+            "vite",
             "jest",
             "sass",
             "redux-saga",
@@ -128,13 +180,10 @@ const en: PortfolioTranslations = {
           endDate: "2021-05-31",
           location: "Laon, France",
           description:
-            "Noirot is a leading French manufacturer of electric radiators and heating solutions, with a strong focus on innovation and sustainable development.",
+            "Noirot is a leading French manufacturer of electric radiators, recognized for its innovation and commitment to sustainable development.",
           bulletPoints: [
-            "Collaborated with internal teams to propose innovative ideas for electric radiators, evaluating their technological feasibility and market acceptance potential.",
-            "Conducted in-depth feasibility studies to assess the technical viability of projects in close collaboration with engineers and technicians.",
-            "Worked closely with marketing teams to analyze the appeal of proposed innovations, identify market needs, and adjust projects accordingly.",
-            "Defined clear specifications for R&D projects, establishing objectives, success criteria, and timelines.",
-            "Led the planning, coordination, and execution of projects, managing development stages, resources, budgets, and deadlines.",
+            "Generation and evaluation of innovative ideas for electric radiators, in collaboration with internal, marketing and technical teams.",
+            "Full management of R&D projects: defining specifications, managing resources, budgets and timelines, from conception to execution.",
           ],
           url: "https://intuis.fr/",
           tags: ["c++", "labview", "raspberrypi", "javascript"],
@@ -165,13 +214,10 @@ const en: PortfolioTranslations = {
           endDate: "2017-12-31",
           location: "Laon, France",
           description:
-            "Noirot is a leading French manufacturer of electric radiators and heating solutions, with a strong focus on innovation and sustainable development.",
+            "Noirot is a leading French manufacturer of electric radiators, recognized for its innovation and commitment to sustainable development.",
           bulletPoints: [
-            "Managed technical projects for the development of internal tools and software.",
-            "Designed and developed control and monitoring software for climate test benches.",
-            "Collaborated with engineering teams to integrate sensors and control systems into the software, ensuring accurate climate measurements.",
-            "Contributed to the continuous improvement of software and processes related to climate test benches.",
-            "Oversaw the assignment of internship projects and provided guidance to laboratory interns.",
+            "Development of control and monitoring software for climatic test benches, integrating sensors and measurement systems in collaboration with engineering teams.",
+            "Management of technical projects for internal tools, continuous process improvement, and mentoring of laboratory interns.",
           ],
           url: "https://www.noirot.fr/",
           tags: ["c++", "labview", "raspberrypi", "javascript"],
@@ -185,12 +231,10 @@ const en: PortfolioTranslations = {
           endDate: "2014-09-30",
           location: "Gonesse, France",
           description:
-            "ABC Essais is an engineering company specializing in the design and manufacturing of test benches for clients in the aerospace and automotive sectors.",
+            "ABC Essais is an engineering company specializing in the design and manufacturing of test benches for the aerospace and automotive sectors.",
           bulletPoints: [
-            "Conducted mechatronic studies and design of test benches for clients in the aerospace and automotive sectors.",
-            "Created mechanical components from scratch using SolidWorks, including 3D modeling, constrained assembly design, and production of standardized technical drawings for part manufacturing.",
-            "Collaborated with engineering teams to meet client specifications and ensure test benches complied with applicable standards.",
-            "Actively participated in design reviews and supported the technical and industrial validation phases.",
+            "Mechatronic studies and test bench design using SolidWorks (3D modeling, assemblies, technical drawings) in compliance with client specifications and applicable standards.",
+            "Participation in design reviews and support during technical and industrial validation phases, in collaboration with engineering teams.",
           ],
           url: "https://abc-essais.com/",
           tags: ["solidworks"],
@@ -199,7 +243,8 @@ const en: PortfolioTranslations = {
       ],
     },
     skills: {
-      subtitle: "Technologies and tools I use to create modern web applications",
+      subtitle:
+        "Technologies and tools I use to create modern web applications",
       tabName: "Skills",
       content: techStack,
     },
@@ -221,7 +266,17 @@ const fr: PortfolioTranslations = {
           description:
             "Ce portfolio présente mon travail à travers une interface moderne et performante, déployée et distribuée sur Cloudflare Pages. Le backend est orchestré via Docker Compose sur un serveur, incluant des outils de monitoring.",
           imageSrc: "pictures/portfolio.webp",
-          tags: ["react", "typescript", "tailwindcss", "firebase", "honojs", "cloudflare", "prometheus", "grafana"],
+          tags: [
+            "react",
+            "typescript",
+            "tailwindcss",
+            "firebase",
+            "vite",
+            "honojs",
+            "cloudflare",
+            "prometheus",
+            "grafana",
+          ],
           demoUrl: "",
           repoUrl: [
             "https://github.com/anthonyrovira/portfolio",
@@ -244,7 +299,14 @@ const fr: PortfolioTranslations = {
           description:
             "Instachef est une application web moderne qui permet de découvrir des recettes en fonction des ingrédients disponibles. Son interface conviviale et ses capacités de recherche efficaces simplifient et rendent la cuisine plus agréable.",
           imageSrc: "pictures/instachef.webp",
-          tags: ["react", "typescript", "tailwindcss", "nextjs", "supabase", "vercel"],
+          tags: [
+            "react",
+            "typescript",
+            "tailwindcss",
+            "nextjs",
+            "supabase",
+            "vercel",
+          ],
           demoUrl: "https://instachef.vercel.app/",
           repoUrl: ["https://github.com/anthonyrovira/insta-chef"],
         },
@@ -263,9 +325,20 @@ const fr: PortfolioTranslations = {
           description:
             "Une application web full-stack qui permet aux utilisateurs de parcourir les personnages et les bandes dessinées de Marvel, construite avec React et Typescript.",
           imageSrc: "pictures/marvel.webp",
-          tags: ["react", "typescript", "tailwindcss", "nodejs", "express", "mongodb", "vercel"],
+          tags: [
+            "react",
+            "typescript",
+            "tailwindcss",
+            "nodejs",
+            "express",
+            "mongodb",
+            "vercel",
+          ],
           demoUrl: "https://marvel-rvr.vercel.app/",
-          repoUrl: ["https://github.com/anthonyrovira/marvel-frontend", "https://github.com/anthonyrovira/marvel-backend"],
+          repoUrl: [
+            "https://github.com/anthonyrovira/marvel-frontend",
+            "https://github.com/anthonyrovira/marvel-backend",
+          ],
         },
         {
           id: "airbnb-automation",
@@ -284,6 +357,31 @@ const fr: PortfolioTranslations = {
       tabName: "Expériences",
       content: [
         {
+          id: "numspot",
+          company: "Numspot",
+          position: "Développeur Frontend",
+          startDate: "2025-07-15",
+          endDate: "2026-02-28",
+          location: "Paris, France",
+          description:
+            "Numspot est un fournisseur de cloud souverain français, offrant des services cloud sécurisés et de confiance aux entreprises et aux organisations du secteur public.",
+          bulletPoints: [
+            "Création d'un Design System (Vite.js) et publication en package npm interne.",
+            "Mise en place de pipelines CI/CD pour la publication de packages npm internes (GitLab Registry).",
+            "Amélioration continue de la console utilisateur (Next.js).",
+          ],
+          url: "https://numspot.com/",
+          tags: [
+            "react",
+            "typescript",
+            "nextjs",
+            "tailwindcss",
+            "vite",
+            "gitlab",
+          ],
+          imageSrc: "pictures/numspot.webp",
+        },
+        {
           id: "linxea",
           company: "Linxea",
           position: "Développeur Frontend",
@@ -291,15 +389,11 @@ const fr: PortfolioTranslations = {
           endDate: "2024-12-31",
           location: "Paris, France",
           description:
-            "Spécialiséée dans les produits d'épargne, Linxea est un courtier en ligne de premier plan en France, offrant une large gamme de produits et services financiers à ses clients.",
+            "Linxea est un courtier en ligne français spécialisé dans les produits d'épargne, proposant une large gamme de solutions financières.",
           bulletPoints: [
-            "Développement d'une base de code React avec TypeScript.",
-            "Création d'un tunnel de souscription comportant de multiples étapes et leurs validations intrinsèques",
-            "Utilisation avancée de Redux, Redux-Saga, Formik et React-Query pour la gestion de l'état et des formulaires.",
-            "Mise en place de tests unitaires avec Jest et Testing Library.",
-            "Création et gestion de Storybook pour élaborer un Design System complet.",
-            "Contribution à la mise en place de tests end-to-end avec Playwright.",
-            "Rédaction de documentations techniques (conventions de code, documentation de fonctionnalités, supports de formation, etc.).",
+            "Développement frontend React/TypeScript avec Redux, Redux-Saga, Formik et React-Query pour la gestion d'état et de formulaires complexes.",
+            "Conception d'un tunnel de souscription multi-étapes avec validation, et contribution aux tests unitaires (Jest, Testing Library) et end-to-end (Playwright).",
+            "Création et maintenance d'un Design System via Storybook, et rédaction de documentations techniques (conventions, fonctionnalités, formations).",
           ],
           url: "https://www.linxea.com/",
           tags: [
@@ -324,13 +418,10 @@ const fr: PortfolioTranslations = {
           endDate: "2021-05-31",
           location: "Laon, France",
           description:
-            "Noirot est un fabricant français de premier plan de radiateurs électriques et de solutions de chauffage, avec un fort accent sur l'innovation et le développement durable.",
+            "Noirot est un fabricant français de radiateurs électriques, reconnu pour son innovation et son engagement en faveur du développement durable.",
           bulletPoints: [
-            "Collaboration avec les équipes internes pour proposer des idées innovantes pour les radiateurs électriques, en évaluant leur faisabilité technologique et leur potentiel d'acceptation par le marché.",
-            "Réalisation d'études de faisabilité approfondies pour évaluer la viabilité technique des projets en étroite collaboration avec les ingénieurs et les techniciens.",
-            "Travail en étroite collaboration avec les équipes marketing pour analyser l'attrait des innovations proposées, identifier les besoins du marché et ajuster les projets en conséquence.",
-            "Définition de spécifications claires pour les projets de R&D, en établissant des objectifs, des critères de réussite et des échéanciers.",
-            "Direction de la planification, de la coordination et de l'exécution des projets, en gérant les étapes de développement, les ressources, les budgets et les délais.",
+            "Génération et évaluation d'idées innovantes pour les radiateurs électriques, en collaboration avec les équipes internes, marketing et techniques.",
+            "Pilotage complet des projets R&D : définition des spécifications, gestion des ressources, des budgets et des délais, de la conception à l'exécution.",
           ],
           url: "https://intuis.fr/",
           tags: ["c++", "labview", "raspberrypi", "javascript"],
@@ -361,13 +452,10 @@ const fr: PortfolioTranslations = {
           endDate: "2017-12-31",
           location: "Laon, France",
           description:
-            "Noirot est un fabricant français de premier plan de radiateurs électriques et de solutions de chauffage, avec un fort accent sur l'innovation et le développement durable.",
+            "Noirot est un fabricant français de radiateurs électriques, reconnu pour son innovation et son engagement en faveur du développement durable.",
           bulletPoints: [
-            "Gestion de projets techniques pour le développement d'outils et de logiciels internes.",
-            "Conception et développement de logiciels de contrôle et de surveillance pour les bancs d'essai climatiques.",
-            "Collaboration avec les équipes d'ingénierie pour intégrer des capteurs et des systèmes de contrôle dans le logiciel, en assurant des mesures climatiques précises.",
-            "Contribution à l'amélioration continue des logiciels et des processus liés aux bancs d'essai climatiques.",
-            "Supervision de l'attribution des projets de stage et encadrement des stagiaires de laboratoire.",
+            "Développement de logiciels de contrôle et de surveillance pour bancs d'essai climatiques, en intégrant capteurs et systèmes de mesure en collaboration avec les équipes d'ingénierie.",
+            "Gestion de projets techniques d'outils internes, amélioration continue des processus, et encadrement des stagiaires de laboratoire.",
           ],
           url: "https://www.noirot.fr/",
           tags: ["c++", "labview", "raspberrypi", "javascript"],
@@ -381,12 +469,10 @@ const fr: PortfolioTranslations = {
           endDate: "2014-09-30",
           location: "Gonesse, France",
           description:
-            "ABC Essais est une société d'ingénierie spécialisée dans la conception et la fabrication de bancs d'essai pour des clients des secteurs de l'aérospatiale et de l'automobile.",
+            "ABC Essais est une société d'ingénierie spécialisée dans la conception et la fabrication de bancs d'essai pour les secteurs aérospatial et automobile.",
           bulletPoints: [
-            "Réalisation d'études mécatroniques et conception de bancs d'essai pour des clients des secteurs de l'aérospatiale et de l'automobile.",
-            "Création de composants mécaniques à partir de zéro à l'aide de SolidWorks, y compris la modélisation 3D, la conception d'assemblages contraints et la production de dessins techniques normalisés pour la fabrication de pièces.",
-            "Collaboration avec les équipes d'ingénierie pour répondre aux spécifications des clients et s'assurer que les bancs d'essai sont conformes aux normes applicables.",
-            "Participation active aux revues de conception et soutien aux phases de validation technique et industrielle.",
+            "Études mécatroniques et conception de bancs d'essai sous SolidWorks (modélisation 3D, assemblages, dessins techniques) en conformité avec les spécifications clients et les normes applicables.",
+            "Participation aux revues de conception et soutien aux phases de validation technique et industrielle, en collaboration avec les équipes d'ingénierie.",
           ],
           url: "https://abc-essais.com/",
           tags: ["solidworks"],
@@ -395,7 +481,8 @@ const fr: PortfolioTranslations = {
       ],
     },
     skills: {
-      subtitle: "Technologies et outils que j’utilise pour créer des applications web modernes",
+      subtitle:
+        "Technologies et outils que j’utilise pour créer des applications web modernes",
       tabName: "Compétences",
       content: techStack,
     },
@@ -417,7 +504,17 @@ const es: PortfolioTranslations = {
           description:
             "Este portafolio presenta mi trabajo a través de una interfaz moderna y de alto rendimiento, desplegada y distribuida en Cloudflare Pages. El backend está orquestado mediante Docker Compose en un servidor, incluyendo herramientas de monitorización.",
           imageSrc: "pictures/portfolio.webp",
-          tags: ["react", "typescript", "tailwindcss", "firebase", "honojs", "cloudflare", "prometheus", "grafana"],
+          tags: [
+            "react",
+            "typescript",
+            "tailwindcss",
+            "firebase",
+            "vite",
+            "honojs",
+            "cloudflare",
+            "prometheus",
+            "grafana",
+          ],
           demoUrl: "",
           repoUrl: [
             "https://github.com/anthonyrovira/portfolio",
@@ -440,7 +537,14 @@ const es: PortfolioTranslations = {
           description:
             "Instachef es una aplicación web moderna diseñada para ayudar a los usuarios a descubrir recetas basadas en los ingredientes que tienen disponibles. Con una interfaz intuitiva y capacidades de búsqueda eficientes, Instachef facilita y hace que cocinar sea más agradable.",
           imageSrc: "pictures/instachef.webp",
-          tags: ["react", "typescript", "tailwindcss", "nextjs", "supabase", "vercel"],
+          tags: [
+            "react",
+            "typescript",
+            "tailwindcss",
+            "nextjs",
+            "supabase",
+            "vercel",
+          ],
           demoUrl: "https://instachef.vercel.app/",
           repoUrl: ["https://github.com/anthonyrovira/insta-chef"],
         },
@@ -459,9 +563,20 @@ const es: PortfolioTranslations = {
           description:
             "Una aplicación web full-stack diseñada para permitir a los usuarios navegar por los personajes y las historietas de Marvel, construida con React y Typescript.",
           imageSrc: "pictures/marvel.webp",
-          tags: ["react", "typescript", "tailwindcss", "nodejs", "express", "mongodb", "vercel"],
+          tags: [
+            "react",
+            "typescript",
+            "tailwindcss",
+            "nodejs",
+            "express",
+            "mongodb",
+            "vercel",
+          ],
           demoUrl: "https://marvel-rvr.vercel.app/",
-          repoUrl: ["https://github.com/anthonyrovira/marvel-frontend", "https://github.com/anthonyrovira/marvel-backend"],
+          repoUrl: [
+            "https://github.com/anthonyrovira/marvel-frontend",
+            "https://github.com/anthonyrovira/marvel-backend",
+          ],
         },
         {
           id: "airbnb-automation",
@@ -479,7 +594,31 @@ const es: PortfolioTranslations = {
       subtitle: "Experiencias profesionales que han dado forma a mi carrera",
       tabName: "Experiencias",
       content: [
-        //help me to translate in spanish
+        {
+          id: "numspot",
+          company: "Numspot",
+          position: "Desarrollador Frontend",
+          startDate: "2025-07-15",
+          endDate: "2026-02-28",
+          location: "París, Francia",
+          description:
+            "Numspot es un proveedor de nube soberana francesa que ofrece servicios cloud seguros y de confianza a empresas y organismos del sector público.",
+          bulletPoints: [
+            "Creación de un Design System (Vite.js) y publicación como paquete npm interno.",
+            "Implementación de pipelines CI/CD para la publicación de paquetes npm internos (GitLab Registry).",
+            "Mejora continua de la consola de usuario (Next.js).",
+          ],
+          url: "https://numspot.com/",
+          tags: [
+            "react",
+            "typescript",
+            "nextjs",
+            "tailwindcss",
+            "vite",
+            "gitlab",
+          ],
+          imageSrc: "pictures/numspot.webp",
+        },
         {
           id: "linxea",
           company: "Linxea",
@@ -488,14 +627,11 @@ const es: PortfolioTranslations = {
           endDate: "2024-12-31",
           location: "París, Francia",
           description:
-            "Especializada en productos de ahorro, Linxea es un corredor en línea líder en Francia, que ofrece una amplia gama de productos y servicios financieros a sus clientes.",
+            "Linxea es un bróker en línea francés especializado en productos de ahorro, que ofrece una amplia gama de soluciones financieras.",
           bulletPoints: [
-            "Desarrollé una base de código React con TypeScript.",
-            "Utilicé Redux, Redux-Saga, Formik y React-Query para la gestión de estados y formularios.",
-            "Implementé pruebas unitarias utilizando Jest y Testing Library.",
-            "Creé y gestioné Storybook para construir un Sistema de Diseño integral.",
-            "Contribuí a la implementación de pruebas de extremo a extremo con Playwright.",
-            "Escribí documentación técnica (convenciones de código, documentación de funciones, materiales de capacitación, etc.).",
+            "Desarrollo frontend con React/TypeScript y Redux, Redux-Saga, Formik y React-Query para la gestión de estado y formularios complejos.",
+            "Diseño de un tunnel de suscripción multi-etapas con validación, y contribución a pruebas unitarias (Jest, Testing Library) y end-to-end (Playwright).",
+            "Creación y mantenimiento de un Design System con Storybook, y redacción de documentación técnica (convenciones, funcionalidades, formaciones).",
           ],
           url: "https://www.linxea.com/",
           tags: [
@@ -520,13 +656,10 @@ const es: PortfolioTranslations = {
           endDate: "2021-05-31",
           location: "Laon, Francia",
           description:
-            "Noirot es un fabricante francés líder de radiadores eléctricos y soluciones de calefacción, con un fuerte enfoque en la innovación y el desarrollo sostenible.",
+            "Noirot es un fabricante francés de radiadores eléctricos, reconocido por su innovación y su compromiso con el desarrollo sostenible.",
           bulletPoints: [
-            "Colaboré con equipos internos para proponer ideas innovadoras para radiadores eléctricos, evaluando su viabilidad tecnológica y su potencial de aceptación en el mercado.",
-            "Realicé estudios de viabilidad en profundidad para evaluar la viabilidad técnica de los proyectos en estrecha colaboración con ingenieros y técnicos.",
-            "Trabajé en estrecha colaboración con los equipos de marketing para analizar el atractivo de las innovaciones propuestas, identificar las necesidades del mercado y ajustar los proyectos en consecuencia.",
-            "Definí especificaciones claras para los proyectos de I+D, estableciendo objetivos, criterios de éxito y plazos.",
-            "Lideré la planificación, coordinación y ejecución de proyectos, gestionando las etapas de desarrollo, los recursos, los presupuestos y los plazos.",
+            "Generación y evaluación de ideas innovadoras para radiadores eléctricos, en colaboración con los equipos internos, de marketing y técnicos.",
+            "Gestión integral de proyectos de I+D: definición de especificaciones, gestión de recursos, presupuestos y plazos, desde la concepción hasta la ejecución.",
           ],
           url: "https://intuis.fr/",
           tags: ["c++", "labview", "raspberrypi", "javascript"],
@@ -557,13 +690,10 @@ const es: PortfolioTranslations = {
           endDate: "2017-12-31",
           location: "Laon, Francia",
           description:
-            "Noirot es un fabricante francés líder de radiadores eléctricos y soluciones de calefacción, con un fuerte enfoque en la innovación y el desarrollo sostenible.",
+            "Noirot es un fabricante francés de radiadores eléctricos, reconocido por su innovación y su compromiso con el desarrollo sostenible.",
           bulletPoints: [
-            "Gestioné proyectos técnicos para el desarrollo de herramientas y software internos.",
-            "Diseñé y desarrollé software de control y monitoreo para bancos de pruebas climáticas.",
-            "Colaboré con equipos de ingeniería para integrar sensores y sistemas de control en el software, asegurando mediciones climáticas precisas.",
-            "Contribuí a la mejora continua del software y los procesos relacionados con los bancos de pruebas climáticas.",
-            "Supervisé la asignación de proyectos de prácticas y brindé orientación a los pasantes de laboratorio.",
+            "Desarrollo de software de control y supervisión para bancos de prueba climáticos, integrando sensores y sistemas de medición en colaboración con los equipos de ingeniería.",
+            "Gestión de proyectos técnicos de herramientas internas, mejora continua de procesos y tutoría de estudiantes en prácticas de laboratorio.",
           ],
           url: "https://www.noirot.fr/",
           tags: ["c++", "labview", "raspberrypi", "javascript"],
@@ -577,12 +707,10 @@ const es: PortfolioTranslations = {
           endDate: "2014-09-30",
           location: "Gonesse, Francia",
           description:
-            "ABC Essais es una empresa de ingeniería especializada en el diseño y la fabricación de bancos de pruebas para clientes de los sectores aeroespacial y automotriz.",
+            "ABC Essais es una empresa de ingeniería especializada en el diseño y la fabricación de bancos de prueba para los sectores aeroespacial y automovilístico.",
           bulletPoints: [
-            "Realicé estudios mecatrónicos y diseñé bancos de pruebas para clientes de los sectores aeroespacial y automotriz.",
-            "Creé componentes mecánicos desde cero utilizando SolidWorks, incluyendo modelado 3D, diseño de ensamblaje restringido y producción de dibujos técnicos estandarizados para la fabricación de piezas.",
-            "Colaboré con equipos de ingeniería para cumplir con las especificaciones del cliente y asegurar que los bancos de pruebas cumplieran con los estándares aplicables.",
-            "Participé activamente en las revisiones de diseño y apoyé las fases de validación técnica e industrial.",
+            "Estudios mecatrónicos y diseño de bancos de prueba con SolidWorks (modelado 3D, ensamblajes, planos técnicos) conforme a las especificaciones de los clientes y las normas aplicables.",
+            "Participación en revisiones de diseño y apoyo en las fases de validación técnica e industrial, en colaboración con los equipos de ingeniería.",
           ],
           url: "https://abc-essais.com/",
           tags: ["solidworks"],
@@ -591,7 +719,8 @@ const es: PortfolioTranslations = {
       ],
     },
     skills: {
-      subtitle: "Tecnologías y herramientas que utilizo para crear aplicaciones web modernas",
+      subtitle:
+        "Tecnologías y herramientas que utilizo para crear aplicaciones web modernas",
       tabName: "Habilidades",
       content: techStack,
     },
