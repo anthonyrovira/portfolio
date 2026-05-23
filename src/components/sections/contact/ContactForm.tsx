@@ -17,7 +17,6 @@ import AnimatedSection, {
 import DOMPurify from "dompurify";
 import { db } from "@/utils/firebase/firebase";
 
-// Define the form schema with Zod
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
   email: z.string().email({ message: "Invalid email address" }),
