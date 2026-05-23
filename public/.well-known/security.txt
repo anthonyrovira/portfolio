@@ -1,0 +1,5 @@
+Contact: https://anthonyrovira.dev
+Contact: mailto:anthonyrov@gmail.com
+Expires: 2027-05-23T00:00:00Z
+Preferred-Languages: en, fr, es
+Canonical: https://anthonyrovira.dev/.well-known/security.txt
