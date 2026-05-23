@@ -7,7 +7,9 @@ import SocialLinksIcons from "./SocialLinksIcons";
 
 // Mock SVG imports
 vi.mock("@/icons/github.svg?react", () => ({ default: vi.fn(() => <svg />) }));
-vi.mock("@/icons/linkedin.svg?react", () => ({ default: vi.fn(() => <svg />) }));
+vi.mock("@/icons/linkedin.svg?react", () => ({
+  default: vi.fn(() => <svg />),
+}));
 vi.mock("@/icons/x.svg?react", () => ({ default: vi.fn(() => <svg />) }));
 
 describe("SocialLinksIcons", () => {
@@ -15,7 +17,10 @@ describe("SocialLinksIcons", () => {
     render(<SocialLinksIcons />);
 
     const linkedin = screen.getByRole("link", { name: /linkedin/i });
-    expect(linkedin).toHaveAttribute("href", "https://www.linkedin.com/in/anthonyrovira/");
+    expect(linkedin).toHaveAttribute(
+      "href",
+      "https://www.linkedin.com/in/anthonyrovira/",
+    );
     expect(linkedin).toHaveAttribute("target", "_blank");
     expect(linkedin).toHaveAttribute("rel", "noopener noreferrer");
 
@@ -32,7 +37,9 @@ describe("SocialLinksIcons", () => {
     const links = screen.getAllByRole("link");
     links.forEach((link) => {
       expect(link).toHaveClass("text-text-light dark:text-white/50");
-      expect(link).toHaveClass("hover:text-text-light_secondary dark:hover:text-white");
+      expect(link).toHaveClass(
+        "hover:text-text-light_secondary dark:hover:text-white",
+      );
       expect(link).toHaveClass("transition-colors duration-300");
     });
   });
@@ -40,8 +47,17 @@ describe("SocialLinksIcons", () => {
   it("renders SVG icons with correct size classes", () => {
     render(<SocialLinksIcons />);
 
-    expect(LinkedIn).toHaveBeenCalledWith(expect.objectContaining({ className: "w-5 h-5" }), {});
-    expect(GitHub).toHaveBeenCalledWith(expect.objectContaining({ className: "w-5 h-5" }), {});
-    expect(X).toHaveBeenCalledWith(expect.objectContaining({ className: "w-5 h-5" }), {});
+    expect(LinkedIn).toHaveBeenCalledWith(
+      expect.objectContaining({ className: "w-5 h-5" }),
+      undefined,
+    );
+    expect(GitHub).toHaveBeenCalledWith(
+      expect.objectContaining({ className: "w-5 h-5" }),
+      undefined,
+    );
+    expect(X).toHaveBeenCalledWith(
+      expect.objectContaining({ className: "w-5 h-5" }),
+      undefined,
+    );
   });
 });

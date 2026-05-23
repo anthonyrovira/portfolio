@@ -8,7 +8,9 @@ import SocialLinkHero from "./SocialLinkHero";
 
 // Mock SVG imports
 vi.mock("@/icons/github.svg?react", () => ({ default: vi.fn(() => <svg />) }));
-vi.mock("@/icons/linkedin.svg?react", () => ({ default: vi.fn(() => <svg />) }));
+vi.mock("@/icons/linkedin.svg?react", () => ({
+  default: vi.fn(() => <svg />),
+}));
 vi.mock("@/icons/x.svg?react", () => ({ default: vi.fn(() => <svg />) }));
 
 describe("SocialLinkHero", () => {
@@ -54,14 +56,19 @@ describe("SocialLinkHero", () => {
   });
 
   it("renders the correct icon based on the `icon` prop", () => {
-    render(<SocialLinkHero icon="linkedin" link="https://www.linkedin.com/in/anthonyrovira/" />);
+    render(
+      <SocialLinkHero
+        icon="linkedin"
+        link="https://www.linkedin.com/in/anthonyrovira/"
+      />,
+    );
 
     expect(LinkedIn).toHaveBeenCalledWith(
       expect.objectContaining({
         className:
           "w-5 h-5 sm:w-6 sm:h-6 text-text-light_secondary group-hover:text-accent-purple dark:text-gray-400 dark:group-hover:text-white",
       }),
-      {}
+      undefined,
     );
   });
 });
