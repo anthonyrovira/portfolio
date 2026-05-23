@@ -19,7 +19,7 @@ export const ErrorPage = ({ text, canRefresh, goBackToHome }: Props) => {
       <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full absolute inset-0 max-w-7xl flex flex-col items-center justify-center gap-5">
         {/* Error heading */}
         <h1 className="relative w-max">
-          <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20" />
+          <span className="absolute -inset-2 bg-linear-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20" />
           <span className="relative text-5xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-7xl font-bold text-text-light_secondary">
             {text}
           </span>
@@ -27,7 +27,8 @@ export const ErrorPage = ({ text, canRefresh, goBackToHome }: Props) => {
 
         {/* Description */}
         <p className="darkTextPrimaryForeground text-primary-light-foreground text-pretty mdTextLg text-base max-w-lg">
-          Very sorry, but something went wrong. Please try again later or contact me directly{" "}
+          Very sorry, but something went wrong. Please try again later or
+          contact me directly{" "}
           <a
             href={"mailto:anthonyrov@gmail.com"}
             className="text-accent-purple hover:text-accent-blue transition-colors duration-300"

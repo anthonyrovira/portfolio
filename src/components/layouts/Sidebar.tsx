@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "../ui/common/ThemeToggle";
-import { GalleryHorizontalEnd, House, Send, UserRoundSearch } from "lucide-react";
+import {
+  GalleryHorizontalEnd,
+  House,
+  Send,
+  UserRoundSearch,
+} from "lucide-react";
 import LanguageSwitcher from "../ui/common/LanguageSwitcher";
 import SocialLinksIcons from "../ui/common/SocialLinksIcons";
 import { useLanguage } from "@/hooks/useLanguage";
@@ -31,7 +36,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      if (isOpen && !target.closest(".sidebar") && !target.closest(".sidebar-toggle")) {
+      if (
+        isOpen &&
+        !target.closest(".sidebar") &&
+        !target.closest(".sidebar-toggle")
+      ) {
         onClose();
       }
     };
@@ -42,8 +51,18 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const menuItems = [
     { id: "home", title: t.navbar.home, Icon: House, section: "home" },
-    { id: "about", title: t.navbar.about, Icon: UserRoundSearch, section: "about" },
-    { id: "portfolio", title: t.navbar.portfolio, Icon: GalleryHorizontalEnd, section: "portfolio" },
+    {
+      id: "about",
+      title: t.navbar.about,
+      Icon: UserRoundSearch,
+      section: "about",
+    },
+    {
+      id: "portfolio",
+      title: t.navbar.portfolio,
+      Icon: GalleryHorizontalEnd,
+      section: "portfolio",
+    },
     { id: "contact", title: t.navbar.contact, Icon: Send, section: "contact" },
   ];
 
@@ -86,7 +105,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <div className="p-6 bg-linear-to-r dark:from-accent-purple/10 dark:to-accent-blue/10 from-accent-light-purple/5 to-accent-light-blue/5 backdrop-blur-xs border-b dark:border-white/10 border-light-border">
                   <h2 className="text-xl font-bold dark:text-white text-text-light">
                     Anthony{" "}
-                    <span className="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">Rovira</span>
+                    <span className="bg-linear-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">
+                      Rovira
+                    </span>
                   </h2>
                 </div>
 
@@ -105,7 +126,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         >
                           <Icon
                             className={`text-xl mr-3 ${
-                              activeLink === id ? "text-accent-purple" : "dark:text-white text-text-light"
+                              activeLink === id
+                                ? "text-accent-purple"
+                                : "dark:text-white text-text-light"
                             }`}
                           />
                           <span
@@ -124,7 +147,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
                   {/* Language Switcher */}
                   <div className="mt-6 px-2">
-                    <h3 className="dark:text-white/70 text-text-light/70 text-sm px-4 mb-2">{t.navbar.language}</h3>
+                    <h3 className="dark:text-white/70 text-text-light/70 text-sm px-4 mb-2">
+                      {t.navbar.language}
+                    </h3>
                     <div className="space-y-1">
                       <LanguageSwitcher variant="buttons" />
                     </div>
@@ -132,7 +157,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
                   {/* Theme Toggler */}
                   <div className="mt-6 px-2">
-                    <h3 className="dark:text-white/70 text-text-light/70 text-sm px-4 mb-2">{t.navbar.theme || "Theme"}</h3>
+                    <h3 className="dark:text-white/70 text-text-light/70 text-sm px-4 mb-2">
+                      {t.navbar.theme || "Theme"}
+                    </h3>
                     <div className="px-4 py-3">
                       <ThemeToggle variant="buttons" />
                     </div>
