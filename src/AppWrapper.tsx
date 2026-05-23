@@ -1,5 +1,5 @@
 import { ErrorBoundary } from "react-error-boundary";
-import { RouterProvider } from "react-router-dom";
+import { RouterProvider } from "react-router";
 import { router } from "./router";
 import { ThemeProvider } from "./components/providers/ThemeProvider";
 import { LanguageProvider } from "@/components/providers/LanguageProvider";
@@ -14,7 +14,11 @@ export const AppWrapper = () => {
           <ErrorBoundary
             fallback={<SomethingWentWrongPage />}
             onError={(error) => {
-              console.error("Caught error in AppWrapper", error.message, error.stack);
+              console.error(
+                "Caught error in AppWrapper",
+                error.message,
+                error.stack,
+              );
             }}
           >
             <RouterProvider router={router} />

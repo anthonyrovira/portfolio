@@ -1,6 +1,6 @@
 import { Home, RefreshCcw } from "lucide-react";
 import { ReactNode } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 interface Props {
   text: ReactNode;

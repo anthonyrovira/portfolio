@@ -1,5 +1,5 @@
 import { lazy, type ReactNode, Suspense } from "react";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router";
 import App from "./pages/App";
 
 export const SuspenseWrapper = ({ children }: { children: ReactNode }) => {
@@ -7,7 +7,9 @@ export const SuspenseWrapper = ({ children }: { children: ReactNode }) => {
 };
 
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
-const SomethingWentWrongPage = lazy(() => import("./pages/SomethingWentWrongPage"));
+const SomethingWentWrongPage = lazy(
+  () => import("./pages/SomethingWentWrongPage"),
+);
 
 export const router = createBrowserRouter([
   {
