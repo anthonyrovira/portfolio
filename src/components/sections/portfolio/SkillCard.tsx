@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { SkillItem } from "../../../utils/projectsData";
 import AnimatedSection, { fadeIn } from "../../ui/animations/AnimatedSection";
 import { clsx } from "clsx";

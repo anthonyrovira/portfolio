@@ -19,7 +19,7 @@ class IntersectionObserverMock {
 
 globalThis.IntersectionObserver = IntersectionObserverMock as any;
 
-// Mock ResizeObserver if needed (framer-motion might use it)
+// Mock ResizeObserver if needed (motion/react might use it)
 globalThis.ResizeObserver = vi.fn().mockImplementation(() => ({
   observe: vi.fn(),
   unobserve: vi.fn(),

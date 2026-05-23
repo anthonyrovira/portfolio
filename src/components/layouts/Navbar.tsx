@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { HiMenu, HiX } from "react-icons/hi";
 import AnimatedSection, { fadeIn } from "../ui/animations/AnimatedSection";
 import ThemeToggle from "../ui/common/ThemeToggle";
@@ -53,11 +53,17 @@ export function Navbar({ isSidebarOpen, toggleSidebar }: NavbarProps) {
   return (
     <nav
       className={`w-full flex items-center py-5 fixed top-0 z-30 ${
-        scrolled ? "dark:bg-dark-background/85 bg-light-background/85 backdrop-blur-md shadow-lg" : "bg-transparent"
+        scrolled
+          ? "dark:bg-dark-background/85 bg-light-background/85 backdrop-blur-md shadow-lg"
+          : "bg-transparent"
       } transition-colors duration-300`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection variants={fadeIn("right", 0)} animate="show" className="flex items-center gap-1">
+        <AnimatedSection
+          variants={fadeIn("right", 0)}
+          animate="show"
+          className="flex items-center gap-1"
+        >
           <motion.button
             className="flex items-center gap-1 px-3 py-1 rounded-md -ml-2.5"
             role="button"
@@ -71,7 +77,11 @@ export function Navbar({ isSidebarOpen, toggleSidebar }: NavbarProps) {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <img src="AR-dark.png" alt="AR Logo" className="w-10 md:w-12 h-auto" />
+            <img
+              src="AR-dark.png"
+              alt="AR Logo"
+              className="w-10 md:w-12 h-auto"
+            />
           </motion.button>
         </AnimatedSection>
 
@@ -103,7 +113,10 @@ export function Navbar({ isSidebarOpen, toggleSidebar }: NavbarProps) {
         </AnimatedSection>
 
         {/* Mobile Navigation - Sidebar Toggle */}
-        <div data-testid="mobile-menu" className="sm:hidden p-1 mr-3 flex justify-end items-center">
+        <div
+          data-testid="mobile-menu"
+          className="sm:hidden p-1 mr-3 flex justify-end items-center"
+        >
           <motion.button
             role="button"
             type="button"

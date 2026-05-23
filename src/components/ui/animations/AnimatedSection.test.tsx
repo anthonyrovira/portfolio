@@ -2,11 +2,13 @@ import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import AnimatedSection from "./AnimatedSection";
 
-// Mock framer-motion
-vi.mock("framer-motion", () => ({
+// Mock motion/react
+vi.mock("motion/react", () => ({
   motion: {
     div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
-    section: ({ children, ...props }: any) => <section {...props}>{children}</section>,
+    section: ({ children, ...props }: any) => (
+      <section {...props}>{children}</section>
+    ),
   },
   AnimatePresence: ({ children }: any) => children,
 }));
@@ -17,7 +19,7 @@ describe("AnimatedSection", () => {
     render(
       <AnimatedSection>
         <div data-testid="child">Test Child</div>
-      </AnimatedSection>
+      </AnimatedSection>,
     );
 
     expect(screen.getByTestId("child")).toBeInTheDocument();
@@ -28,7 +30,7 @@ describe("AnimatedSection", () => {
     const { container } = render(
       <AnimatedSection className="test-class" id="test-id">
         Content
-      </AnimatedSection>
+      </AnimatedSection>,
     );
 
     const div = container.firstChild;

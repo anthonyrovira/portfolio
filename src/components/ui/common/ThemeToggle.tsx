@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Sun, Moon } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import useTheme from "@/hooks/useTheme";

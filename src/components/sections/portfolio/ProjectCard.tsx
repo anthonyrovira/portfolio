@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ExternalLink } from "lucide-react";
 import GitHub from "@/icons/github.svg?react";
 import AnimatedSection, { fadeIn } from "../../ui/animations/AnimatedSection";
@@ -21,7 +21,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       variants={fadeIn("up", 0.2)}
       viewport={{ once: true, margin: "-100px" }}
       whileHover={{
-        boxShadow: "0 10px 25px -5px rgba(75, 0, 130, 0.3), 0 8px 10px -6px rgba(75, 0, 130, 0.2)",
+        boxShadow:
+          "0 10px 25px -5px rgba(75, 0, 130, 0.3), 0 8px 10px -6px rgba(75, 0, 130, 0.2)",
         y: -5,
       }}
     >
@@ -54,7 +55,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         </h3>
 
         {/* Description */}
-        <p className="dark:text-white/80 text-text-light_secondary text-sm text-pretty text-justify">{description}</p>
+        <p className="dark:text-white/80 text-text-light_secondary text-sm text-pretty text-justify">
+          {description}
+        </p>
 
         <div className="flex flex-wrap gap-2">
           <Tags tags={tags} />

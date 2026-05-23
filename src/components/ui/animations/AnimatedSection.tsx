@@ -1,8 +1,18 @@
 import { ReactNode, RefObject } from "react";
-import { AnimationControls, motion, Target, TargetAndTransition, VariantLabels, Variants } from "framer-motion";
+import {
+  AnimationControls,
+  motion,
+  Target,
+  TargetAndTransition,
+  VariantLabels,
+  Variants,
+} from "motion/react";
 
 // Animation variants for different animation styles
-export const fadeIn = (direction: "up" | "down" | "left" | "right", delay: number = 0): Variants => {
+export const fadeIn = (
+  direction: "up" | "down" | "left" | "right",
+  delay: number = 0,
+): Variants => {
   return {
     hidden: {
       y: direction === "up" ? 40 : direction === "down" ? -40 : 0,
@@ -42,7 +52,12 @@ export const zoomIn = (delay: number = 0, scale: number = 0.85): Variants => {
   };
 };
 
-export const slideIn = (direction: "up" | "down" | "left" | "right", type: string, delay: number, duration: number): Variants => {
+export const slideIn = (
+  direction: "up" | "down" | "left" | "right",
+  type: string,
+  delay: number,
+  duration: number,
+): Variants => {
   return {
     hidden: {
       x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,

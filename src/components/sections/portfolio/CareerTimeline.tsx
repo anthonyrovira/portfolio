@@ -1,6 +1,6 @@
 import { Experience } from "@/utils/translations/types";
 import TimelineCard from "./TimelineCard";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 type CareerTimelineProps = {
   experiences: Experience[];

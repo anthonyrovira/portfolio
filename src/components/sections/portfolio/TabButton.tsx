@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { clsx } from "clsx";
 import { FC, ReactNode } from "react";
 
@@ -16,7 +16,7 @@ const TabButton: FC<TabButtonProps> = ({ children, active, onClick }) => {
         "px-4 sm:px-6 py-1.5 sm:py-2 text-xs sm:text-sm relative rounded-full shadow-none font-medium transition-colors duration-300",
         active
           ? "dark:text-white text-text-light"
-          : "dark:text-white/60 text-text-light_secondary dark:hover:text-white/90 hover:text-text-light_secondary hover:shadow-xl"
+          : "dark:text-white/60 text-text-light_secondary dark:hover:text-white/90 hover:text-text-light_secondary hover:shadow-xl",
       )}
       whileHover={{ y: -2 }}
       whileTap={{ y: 0 }}

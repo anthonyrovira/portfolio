@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -11,7 +11,9 @@ import { createMessage } from "@/utils/firebase/messages";
 import { useLanguage } from "@/hooks/useLanguage";
 import { Send } from "lucide-react";
 import { clsx } from "clsx";
-import AnimatedSection, { fadeIn } from "@/components/ui/animations/AnimatedSection";
+import AnimatedSection, {
+  fadeIn,
+} from "@/components/ui/animations/AnimatedSection";
 import DOMPurify from "dompurify";
 import { db } from "@/utils/firebase/firebase";
 
@@ -19,7 +21,9 @@ import { db } from "@/utils/firebase/firebase";
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
   email: z.string().email({ message: "Invalid email address" }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters" }),
+  message: z
+    .string()
+    .min(10, { message: "Message must be at least 10 characters" }),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -87,7 +91,9 @@ const ContactForm = () => {
       setTimeout(() => setSubmitSuccess(false), 5000);
     } catch (error) {
       console.error("Error submitting form:", error);
-      setSubmitError("There was an error sending your message. Please try again.");
+      setSubmitError(
+        "There was an error sending your message. Please try again.",
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -131,22 +137,37 @@ const ContactForm = () => {
 
       <div className="relative max-w-6xl pt-24 pb-12 md:pt-4 md:pb-0 mx-auto z-10">
         {/* Section Header */}
-        <AnimatedSection className="text-center mb-6 md:mb-16" variants={fadeIn("down", 0.1)}>
+        <AnimatedSection
+          className="text-center mb-6 md:mb-16"
+          variants={fadeIn("down", 0.1)}
+        >
           <h2 className="text-4xl font-bold text-text-light_secondary dark:text-white mb-4">
             {t.contact.title}
             <span className="bg-linear-to-r from-accent-purple to-accent-blue text-transparent bg-clip-text">
               {t.contact.titleHighlight}
             </span>
           </h2>
-          <p className="text-text-light_secondary dark:text-white/70 max-w-2xl text-pretty mx-auto">{t.contact.subtitle}</p>
+          <p className="text-text-light_secondary dark:text-white/70 max-w-2xl text-pretty mx-auto">
+            {t.contact.subtitle}
+          </p>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-          <AnimatedSection className="lg:col-span-3" variants={fadeIn("right", 0.2)}>
+          <AnimatedSection
+            className="lg:col-span-3"
+            variants={fadeIn("right", 0.2)}
+          >
             <div className="dark:bg-dark-light bg-light-card border dark:border-dark-border border-light-border rounded-xl p-4 md:p-6 shadow-lg">
-              <form role="form" onSubmit={handleSubmit(onSubmit)} className="space-y-4 md:space-y-6">
+              <form
+                role="form"
+                onSubmit={handleSubmit(onSubmit)}
+                className="space-y-4 md:space-y-6"
+              >
                 <div className="space-y-2">
-                  <label htmlFor="name" className="block text-base font-medium text-text-light_secondary dark:text-white/90">
+                  <label
+                    htmlFor="name"
+                    className="block text-base font-medium text-text-light_secondary dark:text-white/90"
+                  >
                     {t.contact.form.name.label}
                   </label>
                   <input
@@ -168,7 +189,10 @@ const ContactForm = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="email" className="block text-base font-medium text-text-light_secondary dark:text-white/90">
+                  <label
+                    htmlFor="email"
+                    className="block text-base font-medium text-text-light_secondary dark:text-white/90"
+                  >
                     {t.contact.form.email.label}
                   </label>
                   <input
@@ -190,7 +214,10 @@ const ContactForm = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="message" className="block text-base font-medium text-text-light_secondary dark:text-white/90">
+                  <label
+                    htmlFor="message"
+                    className="block text-base font-medium text-text-light_secondary dark:text-white/90"
+                  >
                     {t.contact.form.message.label}
                   </label>
                   <textarea
@@ -223,28 +250,45 @@ const ContactForm = () => {
                       "mx-auto flex gap-3 items-center h-10 sm:h-12 py-3 px-6 sm:px-8 text-sm sm:text-base font-bold text-white rounded-full shadow-lg transition-colors duration-300",
                       isSubmitting
                         ? "bg-gray-500"
-                        : "bg-linear-to-r dark:from-[#6366f1] dark:to-[#a855f7] from-accent-light-purple to-accent-light-blue hover:shadow-purple-500/25"
+                        : "bg-linear-to-r dark:from-[#6366f1] dark:to-[#a855f7] from-accent-light-purple to-accent-light-blue hover:shadow-purple-500/25",
                     )}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
                     <Send className="w-5 h-5" />
-                    {isSubmitting ? t.contact.form.sending : t.contact.form.send}
+                    {isSubmitting
+                      ? t.contact.form.sending
+                      : t.contact.form.send}
                   </motion.button>
 
-                  {submitSuccess && <p className="text-green-500 text-sm mt-2 text-center">{t.contact.form.success}</p>}
+                  {submitSuccess && (
+                    <p className="text-green-500 text-sm mt-2 text-center">
+                      {t.contact.form.success}
+                    </p>
+                  )}
 
-                  {submitError && <p className="text-red-500 text-sm mt-2 text-center">{submitError}</p>}
+                  {submitError && (
+                    <p className="text-red-500 text-sm mt-2 text-center">
+                      {submitError}
+                    </p>
+                  )}
                 </div>
               </form>
             </div>
           </AnimatedSection>
 
-          <AnimatedSection className="lg:col-span-2" variants={fadeIn("left", 0.4)}>
+          <AnimatedSection
+            className="lg:col-span-2"
+            variants={fadeIn("left", 0.4)}
+          >
             <div className="dark:bg-dark-light bg-light-card border dark:border-dark-border border-light-border rounded-xl p-4 md:p-6 shadow-lg h-full flex flex-col">
-              <h3 className="text-xl font-semibold text-text-light dark:text-white mb-6">{t.contact.connect.title}</h3>
+              <h3 className="text-xl font-semibold text-text-light dark:text-white mb-6">
+                {t.contact.connect.title}
+              </h3>
 
-              <p className="text-text-light_secondary dark:text-white/70 text-pretty mb-8">{t.contact.connect.subtitle}</p>
+              <p className="text-text-light_secondary dark:text-white/70 text-pretty mb-8">
+                {t.contact.connect.subtitle}
+              </p>
 
               <div className="space-y-6 grow">
                 <a
@@ -258,8 +302,12 @@ const ContactForm = () => {
                     <LinkedIn className="w-5 h-5 text-text-light_secondary dark:text-white" />
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-base font-medium text-text-light dark:text-white">LinkedIn</h4>
-                    <p className="text-sm text-text-light_secondary dark:text-white/50">/in/anthonyrovira</p>
+                    <h4 className="text-base font-medium text-text-light dark:text-white">
+                      LinkedIn
+                    </h4>
+                    <p className="text-sm text-text-light_secondary dark:text-white/50">
+                      /in/anthonyrovira
+                    </p>
                   </div>
                 </a>
 
@@ -274,8 +322,12 @@ const ContactForm = () => {
                     <GitHub className="w-5 h-5 text-text-light_secondary dark:text-white" />
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-base font-medium text-text-light dark:text-white">GitHub</h4>
-                    <p className="text-sm text-text-light_secondary dark:text-white/50">/anthonyrovira</p>
+                    <h4 className="text-base font-medium text-text-light dark:text-white">
+                      GitHub
+                    </h4>
+                    <p className="text-sm text-text-light_secondary dark:text-white/50">
+                      /anthonyrovira
+                    </p>
                   </div>
                 </a>
 
@@ -290,8 +342,12 @@ const ContactForm = () => {
                     <X className="w-5 h-5 text-text-light_secondary dark:text-white" />
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-base font-medium text-text-light dark:text-white">X (Twitter)</h4>
-                    <p className="text-sm text-text-light_secondary dark:text-white/50">@AnthonyRoviraJS</p>
+                    <h4 className="text-base font-medium text-text-light dark:text-white">
+                      X (Twitter)
+                    </h4>
+                    <p className="text-sm text-text-light_secondary dark:text-white/50">
+                      @AnthonyRoviraJS
+                    </p>
                   </div>
                 </a>
               </div>

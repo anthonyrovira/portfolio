@@ -1,5 +1,5 @@
 import { Experience } from "@/utils/translations/types";
-import { useInView, motion } from "framer-motion";
+import { useInView, motion } from "motion/react";
 import { useRef } from "react";
 import Tags from "../../ui/common/Tags";
 import { colorGradients } from "@/constants/colors";

@@ -1,5 +1,5 @@
 import { FC, useMemo, useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import SkillCard from "./SkillCard";
 import { SkillCategory, SkillItem } from "@/utils/projectsData";
 import { clsx } from "clsx";

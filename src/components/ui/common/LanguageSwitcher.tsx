@@ -1,7 +1,7 @@
 import { useLanguage } from "@/hooks/useLanguage";
 import { languageOptions } from "@/utils/translations";
 import { Language } from "@/utils/translations/types";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ChevronDown } from "lucide-react";
 import { FC, useState } from "react";
 import { clsx } from "clsx";
