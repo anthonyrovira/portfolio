@@ -1,28 +1,14 @@
-import { ErrorBoundary } from "react-error-boundary";
-import { RouterProvider } from "react-router";
-import { router } from "./router";
 import { ThemeProvider } from "./components/providers/ThemeProvider";
 import { LanguageProvider } from "@/components/providers/LanguageProvider";
-import SomethingWentWrongPage from "./pages/SomethingWentWrongPage";
 import { HelmetProvider } from "react-helmet-async";
+import App from "@/pages/App";
 
 export const AppWrapper = () => {
   return (
     <HelmetProvider>
       <ThemeProvider>
         <LanguageProvider>
-          <ErrorBoundary
-            fallback={<SomethingWentWrongPage />}
-            onError={(error) => {
-              console.error(
-                "Caught error in AppWrapper",
-                error.message,
-                error.stack,
-              );
-            }}
-          >
-            <RouterProvider router={router} />
-          </ErrorBoundary>
+          <App />
         </LanguageProvider>
       </ThemeProvider>
     </HelmetProvider>
